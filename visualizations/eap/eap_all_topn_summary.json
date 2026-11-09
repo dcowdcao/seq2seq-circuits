@@ -1,0 +1,778 @@
+{
+  "description": "Combined summary of ALL top-n EAP runs thus far (one eap_top<n>/ folder each).",
+  "method": "EAP-IG-inputs",
+  "tag": "EAP_IG_inputs",
+  "ig_steps": 30,
+  "attr_examples": 200,
+  "eval_examples": 256,
+  "scheme": "random",
+  "data": {
+    "store_label": "eap/eap_top200/random",
+    "path": "datasets/eap/eap_top200/random.json",
+    "scheme": "random",
+    "attr_examples": 200,
+    "eval_examples": 256
+  },
+  "metric": "mean(correct-incorrect) logit over answer positions 9..18",
+  "graph": {
+    "n_forward": 37,
+    "n_backward": 101,
+    "real_edges": 1519
+  },
+  "clean_baseline_logit_diff": 10.275474548339844,
+  "corrupted_baseline_logit_diff": -10.340085983276367,
+  "faithfulness_curve": [
+    {
+      "n_requested": 50,
+      "edges_after_prune": 20,
+      "nodes": 10,
+      "circuit_logit_diff": -8.675956726074219,
+      "faithfulness_ratio": 0.0807219990283565
+    },
+    {
+      "n_requested": 75,
+      "edges_after_prune": 52,
+      "nodes": 16,
+      "circuit_logit_diff": -7.409918785095215,
+      "faithfulness_ratio": 0.14213376316823506
+    },
+    {
+      "n_requested": 87,
+      "edges_after_prune": 73,
+      "nodes": 22,
+      "circuit_logit_diff": -6.579442024230957,
+      "faithfulness_ratio": 0.18241773990467308
+    },
+    {
+      "n_requested": 100,
+      "edges_after_prune": 87,
+      "nodes": 24,
+      "circuit_logit_diff": -6.048887252807617,
+      "faithfulness_ratio": 0.20815338607396722
+    },
+    {
+      "n_requested": 200,
+      "edges_after_prune": 199,
+      "nodes": 32,
+      "circuit_logit_diff": -2.055410623550415,
+      "faithfulness_ratio": 0.40186515166640746
+    },
+    {
+      "n_requested": 400,
+      "edges_after_prune": 400,
+      "nodes": 33,
+      "circuit_logit_diff": 3.798705816268921,
+      "faithfulness_ratio": 0.6858310632816367
+    },
+    {
+      "n_requested": 800,
+      "edges_after_prune": 800,
+      "nodes": 33,
+      "circuit_logit_diff": 6.565291881561279,
+      "faithfulness_ratio": 0.8200299884599987
+    }
+  ],
+  "export_n": 200,
+  "circuit_heads_top_export_n": [
+    "a0.h0",
+    "a0.h1",
+    "a0.h2",
+    "a0.h3",
+    "a0.h4",
+    "a0.h5",
+    "a0.h6",
+    "a0.h7",
+    "a1.h0",
+    "a1.h1",
+    "a1.h2",
+    "a1.h3",
+    "a1.h4",
+    "a1.h5",
+    "a1.h6",
+    "a1.h7",
+    "a2.h0",
+    "a2.h1",
+    "a2.h2",
+    "a2.h3",
+    "a2.h4",
+    "a2.h5",
+    "a2.h6",
+    "a2.h7",
+    "a3.h1",
+    "a3.h2",
+    "a3.h3",
+    "a3.h4",
+    "a3.h5",
+    "a3.h6",
+    "a3.h7"
+  ],
+  "manual_movers_found": [
+    "a2.h7",
+    "a3.h1",
+    "a3.h3",
+    "a3.h6"
+  ],
+  "manual_detectors_found": [
+    "a0.h1",
+    "a0.h2",
+    "a0.h4",
+    "a0.h6",
+    "a0.h7"
+  ],
+  "top30_edges": [
+    {
+      "edge": "input->a0.h7<v>",
+      "score": 0.08234814554452896
+    },
+    {
+      "edge": "input->a0.h4<v>",
+      "score": 0.05658400431275368
+    },
+    {
+      "edge": "input->a0.h2<v>",
+      "score": 0.038533806800842285
+    },
+    {
+      "edge": "input->a0.h1<v>",
+      "score": 0.0365053191781044
+    },
+    {
+      "edge": "a3.h1->logits",
+      "score": 0.02824670635163784
+    },
+    {
+      "edge": "a3.h6->logits",
+      "score": 0.026415374130010605
+    },
+    {
+      "edge": "input->a0.h6<v>",
+      "score": 0.025707293301820755
+    },
+    {
+      "edge": "input->a0.h7<k>",
+      "score": 0.022904306650161743
+    },
+    {
+      "edge": "a3.h3->logits",
+      "score": 0.02257741056382656
+    },
+    {
+      "edge": "a3.h4->logits",
+      "score": 0.02029663883149624
+    },
+    {
+      "edge": "a3.h5->logits",
+      "score": 0.02023082599043846
+    },
+    {
+      "edge": "input->a0.h0<v>",
+      "score": 0.019825229421257973
+    },
+    {
+      "edge": "input->a0.h2<k>",
+      "score": 0.019255241379141808
+    },
+    {
+      "edge": "a2.h7->logits",
+      "score": 0.018264271318912506
+    },
+    {
+      "edge": "a3.h2->logits",
+      "score": 0.018198318779468536
+    },
+    {
+      "edge": "input->a0.h3<v>",
+      "score": 0.01819315366446972
+    },
+    {
+      "edge": "a2.h1->logits",
+      "score": 0.016847873106598854
+    },
+    {
+      "edge": "a0.h4->logits",
+      "score": 0.014048436656594276
+    },
+    {
+      "edge": "a2.h5->logits",
+      "score": 0.013757115229964256
+    },
+    {
+      "edge": "a2.h2->logits",
+      "score": 0.013408562168478966
+    },
+    {
+      "edge": "a2.h3->logits",
+      "score": 0.012694323435425758
+    },
+    {
+      "edge": "a1.h7->logits",
+      "score": 0.011995943263173103
+    },
+    {
+      "edge": "input->a0.h6<k>",
+      "score": 0.011865687556564808
+    },
+    {
+      "edge": "a2.h0->logits",
+      "score": 0.01163273211568594
+    },
+    {
+      "edge": "a0.h7->a1.h7<v>",
+      "score": 0.011527671478688717
+    },
+    {
+      "edge": "a3.h7->logits",
+      "score": 0.011221294291317463
+    },
+    {
+      "edge": "input->a0.h4<k>",
+      "score": 0.010721325874328613
+    },
+    {
+      "edge": "a0.h7->a1.h1<v>",
+      "score": 0.010308430530130863
+    },
+    {
+      "edge": "a3.h0->logits",
+      "score": 0.010107608512043953
+    },
+    {
+      "edge": "a1.h4->logits",
+      "score": 0.009936241433024406
+    }
+  ],
+  "heads_to_logits": {
+    "a3.h1": 0.02824670635163784,
+    "a3.h6": 0.026415374130010605,
+    "a3.h3": 0.02257741056382656,
+    "a3.h4": 0.02029663883149624,
+    "a3.h5": 0.02023082599043846,
+    "a2.h7": 0.018264271318912506,
+    "a3.h2": 0.018198318779468536,
+    "a2.h1": 0.016847873106598854,
+    "a0.h4": 0.014048436656594276,
+    "a2.h5": 0.013757115229964256,
+    "a2.h2": 0.013408562168478966,
+    "a2.h3": 0.012694323435425758,
+    "a1.h7": 0.011995943263173103,
+    "a2.h0": 0.01163273211568594,
+    "a3.h7": 0.011221294291317463,
+    "a3.h0": 0.010107608512043953,
+    "a1.h4": 0.009936241433024406,
+    "a1.h6": 0.00937780924141407,
+    "a2.h6": 0.009238341823220253,
+    "a2.h4": 0.009124611504375935,
+    "a1.h1": 0.008864122442901134,
+    "a1.h2": 0.008576761931180954,
+    "a1.h3": 0.007147942204028368,
+    "a1.h5": 0.0064491028897464275,
+    "a1.h0": 0.004975509364157915,
+    "a0.h7": 0.0027746318373829126,
+    "a0.h0": 0.0018768573645502329,
+    "a0.h5": 0.0013266578316688538,
+    "a0.h6": 0.0010481865610927343,
+    "a0.h1": 0.0007679096888750792,
+    "a0.h2": 0.0004526559787336737,
+    "a0.h3": 0.00012435227108653635
+  },
+  "heads_read_importance": {
+    "a0.h7": 0.1141544422134757,
+    "a0.h4": 0.06840910494793206,
+    "a0.h2": 0.06405861675739288,
+    "a0.h1": 0.05003958661109209,
+    "a0.h6": 0.04469765769317746,
+    "a1.h7": 0.03627452422870192,
+    "a1.h4": 0.030110115286561268,
+    "a0.h3": 0.028217245708219707,
+    "a3.h1": 0.027084826539379492,
+    "a1.h2": 0.026778460956023764,
+    "a2.h7": 0.026454132292357713,
+    "a1.h1": 0.026445224960752967,
+    "a0.h0": 0.024726146191824228,
+    "a3.h6": 0.023680277538232986,
+    "a1.h5": 0.02263085152299027,
+    "a2.h1": 0.02253197818083663,
+    "a1.h6": 0.02135601776774365,
+    "a1.h0": 0.02075384326872154,
+    "a3.h4": 0.019167752296731067,
+    "a3.h3": 0.01889532898431412,
+    "a2.h5": 0.018582151556984172,
+    "a3.h5": 0.018514859205041034,
+    "a2.h2": 0.017784731257421527,
+    "a3.h2": 0.01667125830687155,
+    "a2.h3": 0.01617228459429043,
+    "a2.h0": 0.01586960596557674,
+    "a3.h7": 0.015376391147526647,
+    "a1.h3": 0.015266031556166126,
+    "a0.h5": 0.012835659552365541,
+    "a2.h4": 0.012391728670517743,
+    "a2.h6": 0.011507611687562758,
+    "a3.h0": 0.010828301912511051
+  },
+  "heads_write_importance": {
+    "a0.h7": 0.0867669496894905,
+    "a0.h4": 0.06494218181919109,
+    "a1.h7": 0.041309658183308784,
+    "a0.h2": 0.03713487072892008,
+    "a0.h1": 0.03526519024035224,
+    "a1.h4": 0.03251287768023303,
+    "a2.h7": 0.030423159342717554,
+    "a1.h1": 0.02935729571656509,
+    "a3.h1": 0.02824670635163784,
+    "a2.h1": 0.027446186757515534,
+    "a0.h6": 0.0274233227582954,
+    "a1.h2": 0.026874603249780193,
+    "a3.h6": 0.026415374130010605,
+    "a2.h5": 0.023251021968462737,
+    "a1.h5": 0.022980567669577567,
+    "a3.h3": 0.02257741056382656,
+    "a2.h2": 0.022021932964889857,
+    "a0.h0": 0.020749208317184298,
+    "a3.h4": 0.02029663883149624,
+    "a3.h5": 0.02023082599043846,
+    "a1.h6": 0.02022829789621028,
+    "a2.h3": 0.019951052467149566,
+    "a1.h0": 0.019835263518643842,
+    "a2.h0": 0.01980796807765728,
+    "a3.h2": 0.018198318779468536,
+    "a0.h3": 0.01767561919518812,
+    "a0.h5": 0.015604677527562671,
+    "a1.h3": 0.015092391367829805,
+    "a2.h6": 0.014490654911149647,
+    "a2.h4": 0.014446682984043946,
+    "a3.h7": 0.011221294291317463,
+    "a3.h0": 0.010107608512043953
+  },
+  "manual_movers": [
+    "a3.h1",
+    "a3.h3",
+    "a3.h6",
+    "a2.h7"
+  ],
+  "manual_detectors": [
+    "a0.h7",
+    "a0.h2",
+    "a0.h1",
+    "a0.h4",
+    "a0.h6"
+  ],
+  "topns_thus_far": [
+    50,
+    75,
+    87,
+    100,
+    200,
+    400,
+    800
+  ],
+  "per_topn": {
+    "50": {
+      "n": 50,
+      "folder": "eap_top50",
+      "edges_after_prune": 20,
+      "nodes": 10,
+      "circuit_logit_diff": -8.675956726074219,
+      "faithfulness_ratio": 0.0807219990283565,
+      "circuit_heads": [
+        "a0.h4",
+        "a0.h7",
+        "a1.h0",
+        "a1.h1",
+        "a1.h2",
+        "a1.h4",
+        "a1.h5",
+        "a1.h6",
+        "a1.h7"
+      ],
+      "movers_found": [],
+      "n_movers_found": 0,
+      "detectors_found": [
+        "a0.h4",
+        "a0.h7"
+      ],
+      "n_detectors_found": 2,
+      "data": {
+        "store_label": "eap/eap_top200/random",
+        "path": "datasets/eap/eap_top200/random.json",
+        "scheme": "random",
+        "attr_examples": 200,
+        "eval_examples": 256
+      },
+      "files": {
+        "json": "visualizations/eap/eap_top50/eap_top50.json",
+        "pt": "visualizations/eap/eap_top50/eap_top50.pt",
+        "png": "visualizations/eap/eap_top50/eap_top50.png"
+      }
+    },
+    "75": {
+      "n": 75,
+      "folder": "eap_top75",
+      "edges_after_prune": 52,
+      "nodes": 16,
+      "circuit_logit_diff": -7.409918785095215,
+      "faithfulness_ratio": 0.14213376316823506,
+      "circuit_heads": [
+        "a0.h1",
+        "a0.h2",
+        "a0.h4",
+        "a0.h7",
+        "a1.h0",
+        "a1.h1",
+        "a1.h2",
+        "a1.h4",
+        "a1.h5",
+        "a1.h6",
+        "a1.h7",
+        "a2.h1",
+        "a2.h5",
+        "a2.h7",
+        "a3.h4"
+      ],
+      "movers_found": [
+        "a2.h7"
+      ],
+      "n_movers_found": 1,
+      "detectors_found": [
+        "a0.h1",
+        "a0.h2",
+        "a0.h4",
+        "a0.h7"
+      ],
+      "n_detectors_found": 4,
+      "data": {
+        "store_label": "eap/eap_top200/random",
+        "path": "datasets/eap/eap_top200/random.json",
+        "scheme": "random",
+        "attr_examples": 200,
+        "eval_examples": 256
+      },
+      "files": {
+        "json": "visualizations/eap/eap_top75/eap_top75.json",
+        "pt": "visualizations/eap/eap_top75/eap_top75.pt",
+        "png": "visualizations/eap/eap_top75/eap_top75.png"
+      }
+    },
+    "87": {
+      "n": 87,
+      "folder": "eap_top87",
+      "edges_after_prune": 73,
+      "nodes": 22,
+      "circuit_logit_diff": -6.579442024230957,
+      "faithfulness_ratio": 0.18241773990467308,
+      "circuit_heads": [
+        "a0.h0",
+        "a0.h1",
+        "a0.h2",
+        "a0.h4",
+        "a0.h6",
+        "a0.h7",
+        "a1.h0",
+        "a1.h1",
+        "a1.h2",
+        "a1.h4",
+        "a1.h5",
+        "a1.h6",
+        "a1.h7",
+        "a2.h0",
+        "a2.h1",
+        "a2.h3",
+        "a2.h5",
+        "a2.h7",
+        "a3.h1",
+        "a3.h4",
+        "a3.h6"
+      ],
+      "movers_found": [
+        "a2.h7",
+        "a3.h1",
+        "a3.h6"
+      ],
+      "n_movers_found": 3,
+      "detectors_found": [
+        "a0.h1",
+        "a0.h2",
+        "a0.h4",
+        "a0.h6",
+        "a0.h7"
+      ],
+      "n_detectors_found": 5,
+      "data": {
+        "store_label": "eap/eap_top200/random",
+        "path": "datasets/eap/eap_top200/random.json",
+        "scheme": "random",
+        "attr_examples": 200,
+        "eval_examples": 256
+      },
+      "files": {
+        "json": "visualizations/eap/eap_top87/eap_top87.json",
+        "pt": "visualizations/eap/eap_top87/eap_top87.pt",
+        "png": "visualizations/eap/eap_top87/eap_top87.png"
+      }
+    },
+    "100": {
+      "n": 100,
+      "folder": "eap_top100",
+      "edges_after_prune": 87,
+      "nodes": 24,
+      "circuit_logit_diff": -6.048887252807617,
+      "faithfulness_ratio": 0.20815338607396722,
+      "circuit_heads": [
+        "a0.h0",
+        "a0.h1",
+        "a0.h2",
+        "a0.h4",
+        "a0.h6",
+        "a0.h7",
+        "a1.h0",
+        "a1.h1",
+        "a1.h2",
+        "a1.h3",
+        "a1.h4",
+        "a1.h5",
+        "a1.h6",
+        "a1.h7",
+        "a2.h0",
+        "a2.h1",
+        "a2.h2",
+        "a2.h3",
+        "a2.h5",
+        "a2.h7",
+        "a3.h1",
+        "a3.h4",
+        "a3.h6"
+      ],
+      "movers_found": [
+        "a2.h7",
+        "a3.h1",
+        "a3.h6"
+      ],
+      "n_movers_found": 3,
+      "detectors_found": [
+        "a0.h1",
+        "a0.h2",
+        "a0.h4",
+        "a0.h6",
+        "a0.h7"
+      ],
+      "n_detectors_found": 5,
+      "data": {
+        "store_label": "eap/eap_top200/random",
+        "path": "datasets/eap/eap_top200/random.json",
+        "scheme": "random",
+        "attr_examples": 200,
+        "eval_examples": 256
+      },
+      "files": {
+        "json": "visualizations/eap/eap_top100/eap_top100.json",
+        "pt": "visualizations/eap/eap_top100/eap_top100.pt",
+        "png": "visualizations/eap/eap_top100/eap_top100.png"
+      }
+    },
+    "200": {
+      "n": 200,
+      "folder": "eap_top200",
+      "edges_after_prune": 199,
+      "nodes": 32,
+      "circuit_logit_diff": -2.055410623550415,
+      "faithfulness_ratio": 0.40186515166640746,
+      "circuit_heads": [
+        "a0.h0",
+        "a0.h1",
+        "a0.h2",
+        "a0.h3",
+        "a0.h4",
+        "a0.h5",
+        "a0.h6",
+        "a0.h7",
+        "a1.h0",
+        "a1.h1",
+        "a1.h2",
+        "a1.h3",
+        "a1.h4",
+        "a1.h5",
+        "a1.h6",
+        "a1.h7",
+        "a2.h0",
+        "a2.h1",
+        "a2.h2",
+        "a2.h3",
+        "a2.h4",
+        "a2.h5",
+        "a2.h6",
+        "a2.h7",
+        "a3.h1",
+        "a3.h2",
+        "a3.h3",
+        "a3.h4",
+        "a3.h5",
+        "a3.h6",
+        "a3.h7"
+      ],
+      "movers_found": [
+        "a2.h7",
+        "a3.h1",
+        "a3.h3",
+        "a3.h6"
+      ],
+      "n_movers_found": 4,
+      "detectors_found": [
+        "a0.h1",
+        "a0.h2",
+        "a0.h4",
+        "a0.h6",
+        "a0.h7"
+      ],
+      "n_detectors_found": 5,
+      "data": {
+        "store_label": "eap/eap_top200/random",
+        "path": "datasets/eap/eap_top200/random.json",
+        "scheme": "random",
+        "attr_examples": 200,
+        "eval_examples": 256
+      },
+      "files": {
+        "json": "visualizations/eap/eap_top200/eap_top200.json",
+        "pt": "visualizations/eap/eap_top200/eap_top200.pt",
+        "png": "visualizations/eap/eap_top200/eap_top200.png"
+      }
+    },
+    "400": {
+      "n": 400,
+      "folder": "eap_top400",
+      "edges_after_prune": 400,
+      "nodes": 33,
+      "circuit_logit_diff": 3.798705816268921,
+      "faithfulness_ratio": 0.6858310632816367,
+      "circuit_heads": [
+        "a0.h0",
+        "a0.h1",
+        "a0.h2",
+        "a0.h3",
+        "a0.h4",
+        "a0.h5",
+        "a0.h6",
+        "a0.h7",
+        "a1.h0",
+        "a1.h1",
+        "a1.h2",
+        "a1.h3",
+        "a1.h4",
+        "a1.h5",
+        "a1.h6",
+        "a1.h7",
+        "a2.h0",
+        "a2.h1",
+        "a2.h2",
+        "a2.h3",
+        "a2.h4",
+        "a2.h5",
+        "a2.h6",
+        "a2.h7",
+        "a3.h0",
+        "a3.h1",
+        "a3.h2",
+        "a3.h3",
+        "a3.h4",
+        "a3.h5",
+        "a3.h6",
+        "a3.h7"
+      ],
+      "movers_found": [
+        "a2.h7",
+        "a3.h1",
+        "a3.h3",
+        "a3.h6"
+      ],
+      "n_movers_found": 4,
+      "detectors_found": [
+        "a0.h1",
+        "a0.h2",
+        "a0.h4",
+        "a0.h6",
+        "a0.h7"
+      ],
+      "n_detectors_found": 5,
+      "data": {
+        "store_label": "eap/eap_top200/random",
+        "path": "datasets/eap/eap_top200/random.json",
+        "scheme": "random",
+        "attr_examples": 200,
+        "eval_examples": 256
+      },
+      "files": {
+        "json": "visualizations/eap/eap_top400/eap_top400.json",
+        "pt": "visualizations/eap/eap_top400/eap_top400.pt",
+        "png": "visualizations/eap/eap_top400/eap_top400.png"
+      }
+    },
+    "800": {
+      "n": 800,
+      "folder": "eap_top800",
+      "edges_after_prune": 800,
+      "nodes": 33,
+      "circuit_logit_diff": 6.565291881561279,
+      "faithfulness_ratio": 0.8200299884599987,
+      "circuit_heads": [
+        "a0.h0",
+        "a0.h1",
+        "a0.h2",
+        "a0.h3",
+        "a0.h4",
+        "a0.h5",
+        "a0.h6",
+        "a0.h7",
+        "a1.h0",
+        "a1.h1",
+        "a1.h2",
+        "a1.h3",
+        "a1.h4",
+        "a1.h5",
+        "a1.h6",
+        "a1.h7",
+        "a2.h0",
+        "a2.h1",
+        "a2.h2",
+        "a2.h3",
+        "a2.h4",
+        "a2.h5",
+        "a2.h6",
+        "a2.h7",
+        "a3.h0",
+        "a3.h1",
+        "a3.h2",
+        "a3.h3",
+        "a3.h4",
+        "a3.h5",
+        "a3.h6",
+        "a3.h7"
+      ],
+      "movers_found": [
+        "a2.h7",
+        "a3.h1",
+        "a3.h3",
+        "a3.h6"
+      ],
+      "n_movers_found": 4,
+      "detectors_found": [
+        "a0.h1",
+        "a0.h2",
+        "a0.h4",
+        "a0.h6",
+        "a0.h7"
+      ],
+      "n_detectors_found": 5,
+      "data": {
+        "store_label": "eap/eap_top200/random",
+        "path": "datasets/eap/eap_top200/random.json",
+        "scheme": "random",
+        "attr_examples": 200,
+        "eval_examples": 256
+      },
+      "files": {
+        "json": "visualizations/eap/eap_top800/eap_top800.json",
+        "pt": "visualizations/eap/eap_top800/eap_top800.pt",
+        "png": "visualizations/eap/eap_top800/eap_top800.png"
+      }
+    }
+  }
+}

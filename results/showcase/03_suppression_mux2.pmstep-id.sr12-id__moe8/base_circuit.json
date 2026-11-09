@@ -1,0 +1,182 @@
+{
+ "model": "mux2.pmstep-id.sr12-id__moe8",
+ "circuit": "task1",
+ "class": "DomainCircuit",
+ "repo_class": "Task1_mux2_pmstep_id_sr12_idCircuit",
+ "ablation": "mean",
+ "floor": 0.9,
+ "seed": 0,
+ "a": 1.0,
+ "a_clean": 1.0,
+ "a_corrupt": null,
+ "passes": true,
+ "n_nodes": 11,
+ "n_nodes_full": 36,
+ "n_edges": 28,
+ "n_edges_full": 1519,
+ "selection_score": 0.681644,
+ "nodes": [
+  "a0.h0",
+  "a0.h1",
+  "a0.h2",
+  "a0.h4",
+  "a0.h5",
+  "a0.h6",
+  "a0.h7",
+  "m0",
+  "m1",
+  "m2",
+  "m3"
+ ],
+ "edges": [
+  [
+   "input",
+   "a0.h0<q>"
+  ],
+  [
+   "input",
+   "a0.h1<q>"
+  ],
+  [
+   "input",
+   "a0.h1<v>"
+  ],
+  [
+   "input",
+   "a0.h2<q>"
+  ],
+  [
+   "input",
+   "a0.h4<v>"
+  ],
+  [
+   "input",
+   "a0.h5<q>"
+  ],
+  [
+   "input",
+   "a0.h5<v>"
+  ],
+  [
+   "input",
+   "a0.h6<k>"
+  ],
+  [
+   "input",
+   "a0.h6<q>"
+  ],
+  [
+   "input",
+   "a0.h6<v>"
+  ],
+  [
+   "input",
+   "a0.h7<q>"
+  ],
+  [
+   "a0.h0",
+   "m0"
+  ],
+  [
+   "a0.h1",
+   "m0"
+  ],
+  [
+   "a0.h2",
+   "m0"
+  ],
+  [
+   "a0.h4",
+   "m0"
+  ],
+  [
+   "a0.h5",
+   "m0"
+  ],
+  [
+   "a0.h6",
+   "m0"
+  ],
+  [
+   "a0.h7",
+   "m0"
+  ],
+  [
+   "m0",
+   "m1"
+  ],
+  [
+   "m0",
+   "m2"
+  ],
+  [
+   "m1",
+   "m2"
+  ],
+  [
+   "m0",
+   "m3"
+  ],
+  [
+   "m1",
+   "m3"
+  ],
+  [
+   "m2",
+   "m3"
+  ],
+  [
+   "m0",
+   "logits"
+  ],
+  [
+   "m1",
+   "logits"
+  ],
+  [
+   "m2",
+   "logits"
+  ],
+  [
+   "m3",
+   "logits"
+  ]
+ ],
+ "reference": {
+  "empty": {
+   "a": 0.3492,
+   "a_clean": 0.3492,
+   "a_corrupt": null
+  },
+  "model": {
+   "a": 1.0,
+   "a_clean": 1.0,
+   "a_corrupt": null
+  },
+  "note": "model = the unablated model under the same metric (the full circuit up to float noise; 1 by construction for interchange, by definition for probe classes); empty = no edges"
+ },
+ "node_definition": "attention heads a{l}.h{h} plus one node per MLP/MoE block m{l} (all experts of a layer form one node); the input embedding and the terminal (logits, or the probe site for probe classes) are edge endpoints, not nodes",
+ "edge_definition": "(writer, reader) pairs; writers = input embedding, heads, MLP/MoE blocks; readers = each head's q/k/v input (separately), each MLP input, the terminal",
+ "n_rows": 10000,
+ "model_seq_acc": 1.0,
+ "candidate": "pipeline/circuits_data/mux2.pmstep-id.sr12-id__moe8/task1/circuits/eap_top30",
+ "selection_mode": "candidate",
+ "checkpoint": "pipeline/models/trained_models_pt/mux2.pmstep-id.sr12-id__moe8.pt",
+ "checkpoint_sha256": "35db7ca821d956263e08d5241b4d6e803d2b49bbda73e11306e3aed23337fde7",
+ "architecture": {
+  "n_layers": 4,
+  "n_heads": 8,
+  "d_model": 128,
+  "d_head": 32,
+  "d_vocab": 12,
+  "n_ctx": 21,
+  "attn_only": false,
+  "d_mlp": 128,
+  "act_fn": "gelu",
+  "num_experts": 8,
+  "experts_per_token": 1
+ },
+ "algorithm": "TaskMux([ParityRoute(Id(10)), SRLatch(1, 2, Id(10))])",
+ "selection_command": "python pipeline/find_circuits/evaluate_circuit.py --model mux2.pmstep-id.sr12-id__moe8 --circuit task1 --select --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/03_suppression_mux2.pmstep-id.sr12-id__moe8.task1.select.json",
+ "command": "python pipeline/find_circuits/evaluate_circuit.py --model mux2.pmstep-id.sr12-id__moe8 --circuit task1 --candidate results/showcase/03_suppression_mux2.pmstep-id.sr12-id__moe8/base_circuit.json --device cpu --seed 0 --threads 4 --out <out.json>"
+}

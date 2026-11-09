@@ -1,0 +1,38 @@
+{
+ "discovery": [
+  {
+   "step": "probes (site scan, training, validation)",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model psum_novel_id__moe8 --only-circuit psum_novel_whole --stages data train probes",
+   "wall_seconds": 107
+  },
+  {
+   "step": "pair pool psum_novel_fresh",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model psum_novel_id__moe8 --only-circuit psum_novel_fresh --stages data",
+   "wall_seconds": 14
+  },
+  {
+   "step": "probe EAP-IG on psum_novel_whole pairs",
+   "command": "python pipeline/find_circuits/eap.py --model psum_novel_id__moe8 --topn-regime frac --circuit psum_novel_whole --probe bridge1_novel_id --probe-readout position --device cpu",
+   "wall_seconds": 201
+  },
+  {
+   "step": "probe EAP-IG on psum_novel_fresh pairs",
+   "command": "python pipeline/find_circuits/eap.py --model psum_novel_id__moe8 --topn-regime frac --circuit psum_novel_fresh --probe bridge1_novel_id --probe-readout position --device cpu",
+   "wall_seconds": 257
+  }
+ ],
+ "selection": [
+  {
+   "step": "evaluate: bridge1_novel_id.select",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model psum_novel_id__moe8 --circuit bridge1_novel_id --select --probe-layer 2 --probe-readout position --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/05_bridge_psum_novel_id__moe8.bridge1_novel_id.select.json",
+   "wall_seconds": 164
+  }
+ ],
+ "heldout": [
+  {
+   "step": "held-out re-evaluation (seed 1)",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model psum_novel_id__moe8 --circuit bridge1_novel_id --candidate results/showcase/05_bridge_psum_novel_id__moe8/circuit.json --probes-root results/showcase/05_bridge_psum_novel_id__moe8/probes --probe-layer 2 --probe-readout position --device cpu --seed 1 --threads 4 --out pipeline/circuits_data/_showcase/05_bridge_psum_novel_id__moe8.heldout.json",
+   "wall_seconds": 94
+  }
+ ]
+}

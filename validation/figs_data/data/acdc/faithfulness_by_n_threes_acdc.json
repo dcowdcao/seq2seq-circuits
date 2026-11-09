@@ -1,0 +1,436 @@
+{
+  "method": "acdc",
+  "mode": "mean",
+  "definitions": {
+    "full_acc": "token accuracy of the unablated model over answer positions 9..18",
+    "empty_acc": "token accuracy with ALL 32 heads mean-ablated",
+    "circuit_acc": "token accuracy keeping ONLY the circuit heads (every other head mean-ablated)",
+    "ablation_reference": "global random-data mean z (validation._mean_z), identical across bins"
+  },
+  "data": {
+    "source": "datasets/edge/n_threes_<k>.json (every input has EXACTLY k 3s)",
+    "per_bin": {
+      "0": {
+        "path": "datasets/edge/n_threes_0.json",
+        "n_examples": 64
+      },
+      "1": {
+        "path": "datasets/edge/n_threes_1.json",
+        "n_examples": 64
+      },
+      "2": {
+        "path": "datasets/edge/n_threes_2.json",
+        "n_examples": 64
+      },
+      "3": {
+        "path": "datasets/edge/n_threes_3.json",
+        "n_examples": 64
+      },
+      "4": {
+        "path": "datasets/edge/n_threes_4.json",
+        "n_examples": 64
+      },
+      "5": {
+        "path": "datasets/edge/n_threes_5.json",
+        "n_examples": 64
+      },
+      "6": {
+        "path": "datasets/edge/n_threes_6.json",
+        "n_examples": 64
+      },
+      "7": {
+        "path": "datasets/edge/n_threes_7.json",
+        "n_examples": 64
+      },
+      "8": {
+        "path": "datasets/edge/n_threes_8.json",
+        "n_examples": 64
+      },
+      "9": {
+        "path": "datasets/edge/n_threes_9.json",
+        "n_examples": 64
+      },
+      "10": {
+        "path": "datasets/edge/n_threes_10.json",
+        "n_examples": 64
+      }
+    }
+  },
+  "circuits": {
+    "acdc_thresh_0.02": {
+      "n_heads": 27,
+      "heads": [
+        "L0H0",
+        "L0H1",
+        "L0H2",
+        "L0H3",
+        "L0H4",
+        "L0H5",
+        "L0H6",
+        "L0H7",
+        "L1H0",
+        "L1H1",
+        "L1H2",
+        "L1H3",
+        "L1H4",
+        "L1H5",
+        "L1H6",
+        "L1H7",
+        "L2H0",
+        "L2H1",
+        "L2H2",
+        "L2H3",
+        "L2H5",
+        "L2H6",
+        "L2H7",
+        "L3H3",
+        "L3H4",
+        "L3H6",
+        "L3H7"
+      ],
+      "per_n_threes": [
+        {
+          "n_threes": 0,
+          "full_acc": 1.0,
+          "empty_acc": 0.04062499850988388,
+          "circuit_acc": 1.0
+        },
+        {
+          "n_threes": 1,
+          "full_acc": 1.0,
+          "empty_acc": 0.09843750298023224,
+          "circuit_acc": 1.0
+        },
+        {
+          "n_threes": 2,
+          "full_acc": 1.0,
+          "empty_acc": 0.171875,
+          "circuit_acc": 0.996874988079071
+        },
+        {
+          "n_threes": 3,
+          "full_acc": 1.0,
+          "empty_acc": 0.2421875,
+          "circuit_acc": 0.995312511920929
+        },
+        {
+          "n_threes": 4,
+          "full_acc": 1.0,
+          "empty_acc": 0.2874999940395355,
+          "circuit_acc": 0.996874988079071
+        },
+        {
+          "n_threes": 5,
+          "full_acc": 0.9937499761581421,
+          "empty_acc": 0.35624998807907104,
+          "circuit_acc": 0.984375
+        },
+        {
+          "n_threes": 6,
+          "full_acc": 0.979687511920929,
+          "empty_acc": 0.4203124940395355,
+          "circuit_acc": 0.964062511920929
+        },
+        {
+          "n_threes": 7,
+          "full_acc": 0.9671875238418579,
+          "empty_acc": 0.49687498807907104,
+          "circuit_acc": 0.9624999761581421
+        },
+        {
+          "n_threes": 8,
+          "full_acc": 0.964062511920929,
+          "empty_acc": 0.5640624761581421,
+          "circuit_acc": 0.949999988079071
+        },
+        {
+          "n_threes": 9,
+          "full_acc": 0.9515625238418579,
+          "empty_acc": 0.637499988079071,
+          "circuit_acc": 0.957812488079071
+        },
+        {
+          "n_threes": 10,
+          "full_acc": 1.0,
+          "empty_acc": 0.699999988079071,
+          "circuit_acc": 1.0
+        }
+      ]
+    },
+    "acdc_thresh_0.055": {
+      "n_heads": 25,
+      "heads": [
+        "L0H0",
+        "L0H1",
+        "L0H2",
+        "L0H3",
+        "L0H4",
+        "L0H5",
+        "L0H6",
+        "L0H7",
+        "L1H1",
+        "L1H2",
+        "L1H3",
+        "L1H4",
+        "L1H5",
+        "L1H6",
+        "L1H7",
+        "L2H0",
+        "L2H1",
+        "L2H2",
+        "L2H3",
+        "L2H5",
+        "L2H6",
+        "L2H7",
+        "L3H4",
+        "L3H6",
+        "L3H7"
+      ],
+      "per_n_threes": [
+        {
+          "n_threes": 0,
+          "full_acc": 1.0,
+          "empty_acc": 0.04062499850988388,
+          "circuit_acc": 1.0
+        },
+        {
+          "n_threes": 1,
+          "full_acc": 1.0,
+          "empty_acc": 0.09843750298023224,
+          "circuit_acc": 0.995312511920929
+        },
+        {
+          "n_threes": 2,
+          "full_acc": 1.0,
+          "empty_acc": 0.171875,
+          "circuit_acc": 0.965624988079071
+        },
+        {
+          "n_threes": 3,
+          "full_acc": 1.0,
+          "empty_acc": 0.2421875,
+          "circuit_acc": 0.921875
+        },
+        {
+          "n_threes": 4,
+          "full_acc": 1.0,
+          "empty_acc": 0.2874999940395355,
+          "circuit_acc": 0.910937488079071
+        },
+        {
+          "n_threes": 5,
+          "full_acc": 0.9937499761581421,
+          "empty_acc": 0.35624998807907104,
+          "circuit_acc": 0.909375011920929
+        },
+        {
+          "n_threes": 6,
+          "full_acc": 0.979687511920929,
+          "empty_acc": 0.4203124940395355,
+          "circuit_acc": 0.890625
+        },
+        {
+          "n_threes": 7,
+          "full_acc": 0.9671875238418579,
+          "empty_acc": 0.49687498807907104,
+          "circuit_acc": 0.9078124761581421
+        },
+        {
+          "n_threes": 8,
+          "full_acc": 0.964062511920929,
+          "empty_acc": 0.5640624761581421,
+          "circuit_acc": 0.9125000238418579
+        },
+        {
+          "n_threes": 9,
+          "full_acc": 0.9515625238418579,
+          "empty_acc": 0.637499988079071,
+          "circuit_acc": 0.9437500238418579
+        },
+        {
+          "n_threes": 10,
+          "full_acc": 1.0,
+          "empty_acc": 0.699999988079071,
+          "circuit_acc": 1.0
+        }
+      ]
+    },
+    "acdc_thresh_0.1": {
+      "n_heads": 18,
+      "heads": [
+        "L0H2",
+        "L0H4",
+        "L0H7",
+        "L1H1",
+        "L1H2",
+        "L1H4",
+        "L1H5",
+        "L1H6",
+        "L1H7",
+        "L2H0",
+        "L2H1",
+        "L2H2",
+        "L2H3",
+        "L2H5",
+        "L2H6",
+        "L2H7",
+        "L3H6",
+        "L3H7"
+      ],
+      "per_n_threes": [
+        {
+          "n_threes": 0,
+          "full_acc": 1.0,
+          "empty_acc": 0.04062499850988388,
+          "circuit_acc": 0.4312500059604645
+        },
+        {
+          "n_threes": 1,
+          "full_acc": 1.0,
+          "empty_acc": 0.09843750298023224,
+          "circuit_acc": 0.4390625059604645
+        },
+        {
+          "n_threes": 2,
+          "full_acc": 1.0,
+          "empty_acc": 0.171875,
+          "circuit_acc": 0.46406251192092896
+        },
+        {
+          "n_threes": 3,
+          "full_acc": 1.0,
+          "empty_acc": 0.2421875,
+          "circuit_acc": 0.550000011920929
+        },
+        {
+          "n_threes": 4,
+          "full_acc": 1.0,
+          "empty_acc": 0.2874999940395355,
+          "circuit_acc": 0.6015625
+        },
+        {
+          "n_threes": 5,
+          "full_acc": 0.9937499761581421,
+          "empty_acc": 0.35624998807907104,
+          "circuit_acc": 0.667187511920929
+        },
+        {
+          "n_threes": 6,
+          "full_acc": 0.979687511920929,
+          "empty_acc": 0.4203124940395355,
+          "circuit_acc": 0.746874988079071
+        },
+        {
+          "n_threes": 7,
+          "full_acc": 0.9671875238418579,
+          "empty_acc": 0.49687498807907104,
+          "circuit_acc": 0.815625011920929
+        },
+        {
+          "n_threes": 8,
+          "full_acc": 0.964062511920929,
+          "empty_acc": 0.5640624761581421,
+          "circuit_acc": 0.875
+        },
+        {
+          "n_threes": 9,
+          "full_acc": 0.9515625238418579,
+          "empty_acc": 0.637499988079071,
+          "circuit_acc": 0.9468749761581421
+        },
+        {
+          "n_threes": 10,
+          "full_acc": 1.0,
+          "empty_acc": 0.699999988079071,
+          "circuit_acc": 1.0
+        }
+      ]
+    },
+    "acdc_thresh_0.2": {
+      "n_heads": 13,
+      "heads": [
+        "L0H4",
+        "L0H7",
+        "L1H2",
+        "L1H4",
+        "L1H6",
+        "L1H7",
+        "L2H1",
+        "L2H2",
+        "L2H3",
+        "L2H5",
+        "L2H6",
+        "L2H7",
+        "L3H6"
+      ],
+      "per_n_threes": [
+        {
+          "n_threes": 0,
+          "full_acc": 1.0,
+          "empty_acc": 0.04062499850988388,
+          "circuit_acc": 0.6328125
+        },
+        {
+          "n_threes": 1,
+          "full_acc": 1.0,
+          "empty_acc": 0.09843750298023224,
+          "circuit_acc": 0.2828125059604645
+        },
+        {
+          "n_threes": 2,
+          "full_acc": 1.0,
+          "empty_acc": 0.171875,
+          "circuit_acc": 0.4046874940395355
+        },
+        {
+          "n_threes": 3,
+          "full_acc": 1.0,
+          "empty_acc": 0.2421875,
+          "circuit_acc": 0.4703125059604645
+        },
+        {
+          "n_threes": 4,
+          "full_acc": 1.0,
+          "empty_acc": 0.2874999940395355,
+          "circuit_acc": 0.550000011920929
+        },
+        {
+          "n_threes": 5,
+          "full_acc": 0.9937499761581421,
+          "empty_acc": 0.35624998807907104,
+          "circuit_acc": 0.614062488079071
+        },
+        {
+          "n_threes": 6,
+          "full_acc": 0.979687511920929,
+          "empty_acc": 0.4203124940395355,
+          "circuit_acc": 0.6968749761581421
+        },
+        {
+          "n_threes": 7,
+          "full_acc": 0.9671875238418579,
+          "empty_acc": 0.49687498807907104,
+          "circuit_acc": 0.776562511920929
+        },
+        {
+          "n_threes": 8,
+          "full_acc": 0.964062511920929,
+          "empty_acc": 0.5640624761581421,
+          "circuit_acc": 0.854687511920929
+        },
+        {
+          "n_threes": 9,
+          "full_acc": 0.9515625238418579,
+          "empty_acc": 0.637499988079071,
+          "circuit_acc": 0.926562488079071
+        },
+        {
+          "n_threes": 10,
+          "full_acc": 1.0,
+          "empty_acc": 0.699999988079071,
+          "circuit_acc": 1.0
+        }
+      ]
+    }
+  }
+}

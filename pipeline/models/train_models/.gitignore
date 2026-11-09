@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# editor
+*.swp
+
+# training outputs
+jobs/
+job_checkpoints/
+*.pt

@@ -1,0 +1,23 @@
+{
+ "discovery": [
+  {
+   "step": "schmitt_noband",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model schmitt_id__moe8 --only-circuit schmitt_noband --stages data train eap smallest audit --smallest-target 0.9",
+   "wall_seconds": 2781
+  }
+ ],
+ "selection": [
+  {
+   "step": "evaluate: schmitt_noband.select",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model schmitt_id__moe8 --circuit schmitt_noband --select --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/01_domain_schmitt_id__moe8.schmitt_noband.select.json",
+   "wall_seconds": 269
+  }
+ ],
+ "heldout": [
+  {
+   "step": "held-out re-evaluation (seed 1)",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model schmitt_id__moe8 --circuit schmitt_noband --candidate results/showcase/01_domain_schmitt_id__moe8/circuit.json --device cpu --seed 1 --threads 4 --out pipeline/circuits_data/_showcase/01_domain_schmitt_id__moe8.heldout.json",
+   "wall_seconds": 80
+  }
+ ]
+}

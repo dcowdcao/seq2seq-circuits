@@ -1,0 +1,100 @@
+{
+ "model": "psum_novel_id__moe8",
+ "circuit": "bridge1_novel_id",
+ "class": "BridgeCircuit",
+ "floor": 0.8,
+ "selected": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_fresh/circuits/eap_probe_bridge1_novel_id_top120",
+ "selected_mode": "candidate",
+ "selection_rule": "maximize (1 - n_nodes/n_nodes_full) * (1 - n_edges/n_edges_full) among candidates with a > floor",
+ "n_nodes_full": 27,
+ "n_edges_full": 802,
+ "modes": [
+  {
+   "mode": "candidate",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model psum_novel_id__moe8 --circuit bridge1_novel_id --select --probe-layer 2 --probe-readout position --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/05_bridge_psum_novel_id__moe8.bridge1_novel_id.select.json",
+   "winner": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_fresh/circuits/eap_probe_bridge1_novel_id_top120",
+   "candidates": [
+    {
+     "a": 0.948238,
+     "a_clean": 0.966516,
+     "a_corrupt": 0.981088,
+     "candidate": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_fresh/circuits/eap_probe_bridge1_novel_id_top120",
+     "n_edges": 114,
+     "n_nodes": 23,
+     "passes": true,
+     "selection_score": 0.12709
+    },
+    {
+     "a": 0.163842,
+     "a_clean": 0.41168,
+     "a_corrupt": 0.397984,
+     "candidate": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_fresh/circuits/eap_probe_bridge1_novel_id_top16",
+     "n_edges": 7,
+     "n_nodes": 3,
+     "passes": false,
+     "selection_score": 0.881131
+    },
+    {
+     "a": 0.950008,
+     "a_clean": 0.966843,
+     "a_corrupt": 0.982588,
+     "candidate": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_fresh/circuits/eap_probe_bridge1_novel_id_top321",
+     "n_edges": 321,
+     "n_nodes": 27,
+     "passes": true,
+     "selection_score": 0.0
+    },
+    {
+     "a": 0.726332,
+     "a_clean": 0.835393,
+     "a_corrupt": 0.869449,
+     "candidate": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_fresh/circuits/eap_probe_bridge1_novel_id_top40",
+     "n_edges": 36,
+     "n_nodes": 10,
+     "passes": false,
+     "selection_score": 0.601367
+    },
+    {
+     "a": 0.951861,
+     "a_clean": 0.96717,
+     "a_corrupt": 0.984171,
+     "candidate": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_whole/circuits/eap_probe_bridge1_novel_id_top120",
+     "n_edges": 116,
+     "n_nodes": 24,
+     "passes": true,
+     "selection_score": 0.09504
+    },
+    {
+     "a": 0.229376,
+     "a_clean": 0.471519,
+     "a_corrupt": 0.486462,
+     "candidate": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_whole/circuits/eap_probe_bridge1_novel_id_top16",
+     "n_edges": 8,
+     "n_nodes": 3,
+     "passes": false,
+     "selection_score": 0.880022
+    },
+    {
+     "a": 0.989102,
+     "a_clean": 0.992741,
+     "a_corrupt": 0.996334,
+     "candidate": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_whole/circuits/eap_probe_bridge1_novel_id_top321",
+     "n_edges": 321,
+     "n_nodes": 27,
+     "passes": true,
+     "selection_score": 0.0
+    },
+    {
+     "a": 0.727461,
+     "a_clean": 0.832385,
+     "a_corrupt": 0.873948,
+     "candidate": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_whole/circuits/eap_probe_bridge1_novel_id_top40",
+     "n_edges": 38,
+     "n_nodes": 11,
+     "passes": false,
+     "selection_score": 0.564515
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "discovery": [
+  {
+   "step": "mexhat_fill: data + EAP-IG",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model mexhat_id__moe8 --only-circuit mexhat_fill --stages data train eap",
+   "wall_seconds": 194
+  },
+  {
+   "step": "mexhat_full (base)",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model mexhat_id__moe8 --only-circuit mexhat_full --stages data eap smallest audit --smallest-target 0.9",
+   "wall_seconds": 1907
+  },
+  {
+   "step": "mexhat_fill: smallest",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model mexhat_id__moe8 --only-circuit mexhat_fill --stages smallest audit --smallest-target 0.8",
+   "wall_seconds": 2150
+  }
+ ],
+ "selection": [
+  {
+   "step": "evaluate: mexhat_full.select",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model mexhat_id__moe8 --circuit mexhat_full --select --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/02_contrast_mexhat_id__moe8.mexhat_full.select.json",
+   "wall_seconds": 214
+  },
+  {
+   "step": "evaluate: mexhat_fill.select",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model mexhat_id__moe8 --circuit mexhat_fill --select --base-candidate results/showcase/02_contrast_mexhat_id__moe8/base_circuit.json --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/02_contrast_mexhat_id__moe8.mexhat_fill.select.json",
+   "wall_seconds": 306
+  }
+ ],
+ "heldout": [
+  {
+   "step": "held-out re-evaluation (seed 1)",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model mexhat_id__moe8 --circuit mexhat_fill --candidate results/showcase/02_contrast_mexhat_id__moe8/circuit.json --base-candidate results/showcase/02_contrast_mexhat_id__moe8/base_circuit.json --device cpu --seed 1 --threads 4 --out pipeline/circuits_data/_showcase/02_contrast_mexhat_id__moe8.heldout.json",
+   "wall_seconds": 115
+  }
+ ]
+}

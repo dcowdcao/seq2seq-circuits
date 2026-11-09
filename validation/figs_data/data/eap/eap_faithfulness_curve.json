@@ -1,0 +1,105 @@
+{
+  "method": "eap",
+  "param": "top-n",
+  "mode": "mean",
+  "points": [
+    {
+      "param": 50,
+      "circuit": "eap_top50",
+      "n_heads": 9,
+      "recovered_acc": 0.32918575840353825,
+      "recovered_logit_diff": 0.21089353562332122,
+      "data": {
+        "store_label": "eap/eap_top50/random",
+        "path": "datasets/eap/eap_top50/random.json",
+        "scheme": "random",
+        "n_examples": 512,
+        "n_threes_caption": "clean n_3s: mean 1.03, range 0-4, N=512"
+      }
+    },
+    {
+      "param": 75,
+      "circuit": "eap_top75",
+      "n_heads": 15,
+      "recovered_acc": 0.5328530872892172,
+      "recovered_logit_diff": 0.450696392400958,
+      "data": {
+        "store_label": "eap/eap_top75/random",
+        "path": "datasets/eap/eap_top75/random.json",
+        "scheme": "random",
+        "n_examples": 512,
+        "n_threes_caption": "clean n_3s: mean 1.03, range 0-4, N=512"
+      }
+    },
+    {
+      "param": 87,
+      "circuit": "eap_top87",
+      "n_heads": 21,
+      "recovered_acc": 0.8393363755759248,
+      "recovered_logit_diff": 0.7713622680842573,
+      "data": {
+        "store_label": "eap/eap_top87/random",
+        "path": "datasets/eap/eap_top87/random.json",
+        "scheme": "random",
+        "n_examples": 512,
+        "n_threes_caption": "clean n_3s: mean 1.03, range 0-4, N=512"
+      }
+    },
+    {
+      "param": 100,
+      "circuit": "eap_top100",
+      "n_heads": 23,
+      "recovered_acc": 0.8474132413680129,
+      "recovered_logit_diff": 0.794937892392266,
+      "data": {
+        "store_label": "eap/eap_top100/random",
+        "path": "datasets/eap/eap_top100/random.json",
+        "scheme": "random",
+        "n_examples": 512,
+        "n_threes_caption": "clean n_3s: mean 1.03, range 0-4, N=512"
+      }
+    },
+    {
+      "param": 200,
+      "circuit": "eap_top200",
+      "n_heads": 31,
+      "recovered_acc": 1.0,
+      "recovered_logit_diff": 0.9926648124628161,
+      "data": {
+        "store_label": "eap/eap_top200/random",
+        "path": "datasets/eap/eap_top200/random.json",
+        "scheme": "random",
+        "n_examples": 512,
+        "n_threes_caption": "clean n_3s: mean 1.03, range 0-4, N=512"
+      }
+    },
+    {
+      "param": 400,
+      "circuit": "eap_top400",
+      "n_heads": 32,
+      "recovered_acc": 1.0,
+      "recovered_logit_diff": 1.0,
+      "data": {
+        "store_label": "eap/eap_top400/random",
+        "path": "datasets/eap/eap_top400/random.json",
+        "scheme": "random",
+        "n_examples": 512,
+        "n_threes_caption": "clean n_3s: mean 1.03, range 0-4, N=512"
+      }
+    },
+    {
+      "param": 800,
+      "circuit": "eap_top800",
+      "n_heads": 32,
+      "recovered_acc": 1.0,
+      "recovered_logit_diff": 1.0,
+      "data": {
+        "store_label": "eap/eap_top800/random",
+        "path": "datasets/eap/eap_top800/random.json",
+        "scheme": "random",
+        "n_examples": 512,
+        "n_threes_caption": "clean n_3s: mean 1.03, range 0-4, N=512"
+      }
+    }
+  ]
+}

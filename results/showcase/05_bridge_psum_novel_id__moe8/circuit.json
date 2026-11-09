@@ -1,0 +1,561 @@
+{
+ "model": "psum_novel_id__moe8",
+ "circuit": "bridge1_novel_id",
+ "class": "BridgeCircuit",
+ "repo_class": "Bridge_psum_novel_id_k1",
+ "ablation": "mean",
+ "floor": 0.8,
+ "seed": 0,
+ "a": 0.948238,
+ "a_clean": 0.966516,
+ "a_corrupt": 0.981088,
+ "passes": true,
+ "n_nodes": 23,
+ "n_nodes_full": 27,
+ "n_edges": 114,
+ "n_edges_full": 802,
+ "selection_score": 0.12709,
+ "nodes": [
+  "a0.h0",
+  "a0.h1",
+  "a0.h2",
+  "a0.h3",
+  "a0.h4",
+  "a0.h5",
+  "a0.h6",
+  "a0.h7",
+  "m0",
+  "a1.h0",
+  "a1.h1",
+  "a1.h2",
+  "a1.h4",
+  "a1.h5",
+  "a1.h6",
+  "a1.h7",
+  "m1",
+  "a2.h2",
+  "a2.h4",
+  "a2.h5",
+  "a2.h6",
+  "a2.h7",
+  "m2"
+ ],
+ "edges": [
+  [
+   "input",
+   "a0.h0<k>"
+  ],
+  [
+   "input",
+   "a0.h0<q>"
+  ],
+  [
+   "input",
+   "a0.h1<k>"
+  ],
+  [
+   "input",
+   "a0.h1<q>"
+  ],
+  [
+   "input",
+   "a0.h1<v>"
+  ],
+  [
+   "input",
+   "a0.h2<k>"
+  ],
+  [
+   "input",
+   "a0.h2<q>"
+  ],
+  [
+   "input",
+   "a0.h2<v>"
+  ],
+  [
+   "input",
+   "a0.h3<k>"
+  ],
+  [
+   "input",
+   "a0.h3<q>"
+  ],
+  [
+   "input",
+   "a0.h3<v>"
+  ],
+  [
+   "input",
+   "a0.h4<k>"
+  ],
+  [
+   "input",
+   "a0.h4<q>"
+  ],
+  [
+   "input",
+   "a0.h4<v>"
+  ],
+  [
+   "input",
+   "a0.h5<k>"
+  ],
+  [
+   "input",
+   "a0.h5<q>"
+  ],
+  [
+   "input",
+   "a0.h5<v>"
+  ],
+  [
+   "input",
+   "a0.h6<k>"
+  ],
+  [
+   "input",
+   "a0.h6<q>"
+  ],
+  [
+   "input",
+   "a0.h6<v>"
+  ],
+  [
+   "input",
+   "a0.h7<k>"
+  ],
+  [
+   "input",
+   "a0.h7<q>"
+  ],
+  [
+   "input",
+   "a0.h7<v>"
+  ],
+  [
+   "a0.h0",
+   "m0"
+  ],
+  [
+   "a0.h1",
+   "m0"
+  ],
+  [
+   "a0.h2",
+   "m0"
+  ],
+  [
+   "a0.h3",
+   "m0"
+  ],
+  [
+   "a0.h4",
+   "m0"
+  ],
+  [
+   "a0.h5",
+   "m0"
+  ],
+  [
+   "a0.h6",
+   "m0"
+  ],
+  [
+   "a0.h7",
+   "m0"
+  ],
+  [
+   "a0.h0",
+   "a1.h0<k>"
+  ],
+  [
+   "a0.h3",
+   "a1.h1<q>"
+  ],
+  [
+   "a0.h3",
+   "a1.h1<v>"
+  ],
+  [
+   "a0.h6",
+   "a1.h1<v>"
+  ],
+  [
+   "a0.h7",
+   "a1.h1<v>"
+  ],
+  [
+   "m0",
+   "a1.h1<v>"
+  ],
+  [
+   "m0",
+   "a1.h2<q>"
+  ],
+  [
+   "m0",
+   "a1.h2<v>"
+  ],
+  [
+   "a0.h6",
+   "a1.h4<k>"
+  ],
+  [
+   "m0",
+   "a1.h4<k>"
+  ],
+  [
+   "a0.h0",
+   "a1.h4<q>"
+  ],
+  [
+   "a0.h7",
+   "a1.h4<q>"
+  ],
+  [
+   "a0.h2",
+   "a1.h4<v>"
+  ],
+  [
+   "a0.h4",
+   "a1.h4<v>"
+  ],
+  [
+   "a0.h5",
+   "a1.h4<v>"
+  ],
+  [
+   "a0.h6",
+   "a1.h4<v>"
+  ],
+  [
+   "a0.h7",
+   "a1.h4<v>"
+  ],
+  [
+   "m0",
+   "a1.h4<v>"
+  ],
+  [
+   "a0.h5",
+   "a1.h5<q>"
+  ],
+  [
+   "a0.h6",
+   "a1.h5<q>"
+  ],
+  [
+   "m0",
+   "a1.h5<q>"
+  ],
+  [
+   "m0",
+   "a1.h5<v>"
+  ],
+  [
+   "a0.h2",
+   "a1.h6<q>"
+  ],
+  [
+   "a0.h5",
+   "a1.h6<q>"
+  ],
+  [
+   "m0",
+   "a1.h6<q>"
+  ],
+  [
+   "a0.h3",
+   "a1.h6<v>"
+  ],
+  [
+   "a0.h5",
+   "a1.h6<v>"
+  ],
+  [
+   "a0.h6",
+   "a1.h6<v>"
+  ],
+  [
+   "a0.h7",
+   "a1.h6<v>"
+  ],
+  [
+   "m0",
+   "a1.h6<v>"
+  ],
+  [
+   "a0.h6",
+   "a1.h7<v>"
+  ],
+  [
+   "m0",
+   "a1.h7<v>"
+  ],
+  [
+   "a0.h0",
+   "m1"
+  ],
+  [
+   "a0.h1",
+   "m1"
+  ],
+  [
+   "a0.h2",
+   "m1"
+  ],
+  [
+   "a0.h3",
+   "m1"
+  ],
+  [
+   "a0.h4",
+   "m1"
+  ],
+  [
+   "a0.h5",
+   "m1"
+  ],
+  [
+   "a0.h6",
+   "m1"
+  ],
+  [
+   "a0.h7",
+   "m1"
+  ],
+  [
+   "m0",
+   "m1"
+  ],
+  [
+   "a1.h2",
+   "m1"
+  ],
+  [
+   "a1.h4",
+   "m1"
+  ],
+  [
+   "a1.h5",
+   "m1"
+  ],
+  [
+   "a1.h6",
+   "m1"
+  ],
+  [
+   "m0",
+   "a2.h2<v>"
+  ],
+  [
+   "m0",
+   "a2.h4<q>"
+  ],
+  [
+   "a0.h3",
+   "a2.h5<q>"
+  ],
+  [
+   "m0",
+   "a2.h5<q>"
+  ],
+  [
+   "m0",
+   "a2.h5<v>"
+  ],
+  [
+   "m1",
+   "a2.h6<q>"
+  ],
+  [
+   "m0",
+   "a2.h7<q>"
+  ],
+  [
+   "m1",
+   "a2.h7<q>"
+  ],
+  [
+   "a0.h2",
+   "m2"
+  ],
+  [
+   "a0.h3",
+   "m2"
+  ],
+  [
+   "a0.h4",
+   "m2"
+  ],
+  [
+   "a0.h7",
+   "m2"
+  ],
+  [
+   "m0",
+   "m2"
+  ],
+  [
+   "a1.h4",
+   "m2"
+  ],
+  [
+   "m1",
+   "m2"
+  ],
+  [
+   "a2.h7",
+   "m2"
+  ],
+  [
+   "a0.h0",
+   "logits"
+  ],
+  [
+   "a0.h1",
+   "logits"
+  ],
+  [
+   "a0.h2",
+   "logits"
+  ],
+  [
+   "a0.h3",
+   "logits"
+  ],
+  [
+   "a0.h4",
+   "logits"
+  ],
+  [
+   "a0.h5",
+   "logits"
+  ],
+  [
+   "a0.h6",
+   "logits"
+  ],
+  [
+   "a0.h7",
+   "logits"
+  ],
+  [
+   "m0",
+   "logits"
+  ],
+  [
+   "a1.h0",
+   "logits"
+  ],
+  [
+   "a1.h1",
+   "logits"
+  ],
+  [
+   "a1.h2",
+   "logits"
+  ],
+  [
+   "a1.h4",
+   "logits"
+  ],
+  [
+   "a1.h5",
+   "logits"
+  ],
+  [
+   "a1.h6",
+   "logits"
+  ],
+  [
+   "a1.h7",
+   "logits"
+  ],
+  [
+   "m1",
+   "logits"
+  ],
+  [
+   "a2.h2",
+   "logits"
+  ],
+  [
+   "a2.h4",
+   "logits"
+  ],
+  [
+   "a2.h5",
+   "logits"
+  ],
+  [
+   "a2.h6",
+   "logits"
+  ],
+  [
+   "m2",
+   "logits"
+  ]
+ ],
+ "probe": {
+  "full_acc": 0.997289,
+  "full_acc_clean": 0.997289,
+  "full_acc_corrupt": 0.999822,
+  "layer": 2,
+  "majority_acc": 0.657489,
+  "majority_acc_clean": 0.657489,
+  "majority_acc_corrupt": 0.733089,
+  "n_classes": 2,
+  "positions": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "readout": "position",
+  "variable": "bridge1_novel_id"
+ },
+ "reference": {
+  "empty": {
+   "a": 0.0,
+   "a_clean": 0.0,
+   "a_corrupt": 0.0
+  },
+  "model": {
+   "a": 1.0,
+   "a_clean": 1.0,
+   "a_corrupt": 1.0
+  },
+  "note": "model = the unablated model under the same metric (the full circuit up to float noise; 1 by construction for interchange, by definition for probe classes); empty = no edges"
+ },
+ "node_definition": "attention heads a{l}.h{h} plus one node per MLP/MoE block m{l} (all experts of a layer form one node); the input embedding and the terminal (logits, or the probe site for probe classes) are edge endpoints, not nodes",
+ "edge_definition": "(writer, reader) pairs; writers = input embedding, heads, MLP/MoE blocks; readers = each head's q/k/v input (separately), each MLP input, the terminal",
+ "n_rows": 10000,
+ "n_pairs": 5000,
+ "candidate": "pipeline/circuits_data/psum_novel_id__moe8/psum_novel_fresh/circuits/eap_probe_bridge1_novel_id_top120",
+ "selection_mode": "candidate",
+ "checkpoint": "pipeline/models/trained_models_pt/psum_novel_id__moe8.pt",
+ "checkpoint_sha256": "4761e6970a1212104e44c0d232ae3e8f665da9fdd44c47ec3e65263648a87d22",
+ "architecture": {
+  "n_layers": 4,
+  "n_heads": 8,
+  "d_model": 128,
+  "d_head": 32,
+  "d_vocab": 10,
+  "n_ctx": 20,
+  "attn_only": false,
+  "d_mlp": 128,
+  "act_fn": "gelu",
+  "num_experts": 8,
+  "experts_per_token": 1
+ },
+ "algorithm": "PrefixSumMod(NoveltyIndicator(Id(10)))",
+ "selection_command": "python pipeline/find_circuits/evaluate_circuit.py --model psum_novel_id__moe8 --circuit bridge1_novel_id --select --probe-layer 2 --probe-readout position --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/05_bridge_psum_novel_id__moe8.bridge1_novel_id.select.json",
+ "command": "python pipeline/find_circuits/evaluate_circuit.py --model psum_novel_id__moe8 --circuit bridge1_novel_id --candidate results/showcase/05_bridge_psum_novel_id__moe8/circuit.json --probes-root results/showcase/05_bridge_psum_novel_id__moe8/probes --probe-layer 2 --probe-readout position --device cpu --seed 0 --threads 4 --out <out.json>"
+}

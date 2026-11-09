@@ -1,0 +1,45 @@
+# --- python caches / build / envs ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+
+# --- os / editor cruft ---
+.DS_Store
+*.swp
+
+# --- smoke-test scratch output ---
+pipeline/.smoke/
+
+# --- generated bundles / logs (regenerable) ---
+figures.zip
+worker_*.log
+
+# --- segrev3 outputs that are regenerable but not shipped ---
+# circuits interp_tools/min_faithful_circuit.py discovers beyond the shipped sweep
+# (its visualizations/min_faithful_circuit_search.json lists them all)
+/visualizations/acdc/acdc_thresh_*/
+!/visualizations/acdc/acdc_thresh_0.2/
+!/visualizations/acdc/acdc_thresh_0.1/
+!/visualizations/acdc/acdc_thresh_0.055/
+!/visualizations/acdc/acdc_thresh_0.02/
+/visualizations/eap/eap_top*/
+!/visualizations/eap/eap_top50/
+!/visualizations/eap/eap_top75/
+!/visualizations/eap/eap_top87/
+!/visualizations/eap/eap_top100/
+!/visualizations/eap/eap_top200/
+!/visualizations/eap/eap_top400/
+!/visualizations/eap/eap_top800/
+# circuit-scoped analyses (manual_circuit.py --circuit / --circuit-json, main.py figs)
+/visualizations/manual_circuit_analysis/figs_data/*/circuits/
+
+# NOTE: github_repos/ (trimmed vendored reference repos) and the curated result
+# folders under visualizations/, validation/figs_data/ and datasets/ ARE tracked.
+# See github_repos/VENDORED_SOURCES.md.
+
+# --- curated results: always tracked ---
+!results/
+!results/**
+results/**/__pycache__/

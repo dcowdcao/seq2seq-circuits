@@ -1,0 +1,1 @@
+{"scheme": "replace_threes_to_nonthrees", "n": 1, "seed": 0, "boundary_digit": 3, "input_len": 10, "answer_positions": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18], "clean_inputs": [[9, 3, 2, 3, 8, 7, 3, 1, 1, 0]], "corrupted_inputs": [[9, 3, 2, 3, 8, 7, 2, 1, 1, 0]], "clean_n_threes": [3], "corrupted_n_threes": [2]}

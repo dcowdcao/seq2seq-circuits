@@ -1,0 +1,48 @@
+{
+ "discovery": [
+  {
+   "step": "task1 (base): data + EAP-IG",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model mux2.pmstep-id.sr12-id__moe8 --only-circuit task1 --stages data train eap",
+   "wall_seconds": 173
+  },
+  {
+   "step": "task1 (base): smallest",
+   "command": "python pipeline/find_circuits/smallest_faithful_circuit.py --model mux2.pmstep-id.sr12-id__moe8 --circuit task1 --target 0.9 --jobs 4",
+   "wall_seconds": 282
+  },
+  {
+   "step": "task0",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model mux2.pmstep-id.sr12-id__moe8 --only-circuit task0 --stages data eap smallest audit --smallest-target 0.9",
+   "wall_seconds": 2217
+  },
+  {
+   "step": "suppress_t1_over_t0 (+ router diagnostic)",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model mux2.pmstep-id.sr12-id__moe8 --only-circuit suppress_t1_over_t0 --stages data eap smallest audit --smallest-target 0.8",
+   "wall_seconds": 1994
+  }
+ ],
+ "selection": [
+  {
+   "step": "evaluate: task1.select",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model mux2.pmstep-id.sr12-id__moe8 --circuit task1 --select --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/03_suppression_mux2.pmstep-id.sr12-id__moe8.task1.select.json",
+   "wall_seconds": 177
+  },
+  {
+   "step": "evaluate: suppress_t1_over_t0.select",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model mux2.pmstep-id.sr12-id__moe8 --circuit suppress_t1_over_t0 --select --base-candidate results/showcase/03_suppression_mux2.pmstep-id.sr12-id__moe8/base_circuit.json --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/03_suppression_mux2.pmstep-id.sr12-id__moe8.suppress_t1_over_t0.select.json",
+   "wall_seconds": 194
+  },
+  {
+   "step": "evaluate: suppress_t1_over_t0.select-union",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model mux2.pmstep-id.sr12-id__moe8 --circuit suppress_t1_over_t0 --select --base-candidate results/showcase/03_suppression_mux2.pmstep-id.sr12-id__moe8/base_circuit.json --union-base --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/03_suppression_mux2.pmstep-id.sr12-id__moe8.suppress_t1_over_t0.select-union.json",
+   "wall_seconds": 197
+  }
+ ],
+ "heldout": [
+  {
+   "step": "held-out re-evaluation (seed 1)",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model mux2.pmstep-id.sr12-id__moe8 --circuit suppress_t1_over_t0 --candidate results/showcase/03_suppression_mux2.pmstep-id.sr12-id__moe8/circuit.json --base-candidate results/showcase/03_suppression_mux2.pmstep-id.sr12-id__moe8/base_circuit.json --device cpu --seed 1 --threads 4 --out pipeline/circuits_data/_showcase/03_suppression_mux2.pmstep-id.sr12-id__moe8.heldout.json",
+   "wall_seconds": 92
+  }
+ ]
+}

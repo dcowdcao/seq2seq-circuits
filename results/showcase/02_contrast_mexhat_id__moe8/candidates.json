@@ -1,0 +1,70 @@
+{
+ "model": "mexhat_id__moe8",
+ "circuit": "mexhat_fill",
+ "class": "ContrastCircuit",
+ "floor": 0.8,
+ "selected": "pipeline/circuits_data/mexhat_id__moe8/mexhat_fill/circuits/eap_top228",
+ "selected_mode": "candidate",
+ "selection_rule": "maximize (1 - n_nodes/n_nodes_full) * (1 - n_edges/n_edges_full) among candidates with a > floor",
+ "n_nodes_full": 36,
+ "n_edges_full": 1519,
+ "modes": [
+  {
+   "mode": "candidate",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model mexhat_id__moe8 --circuit mexhat_fill --select --base-candidate results/showcase/02_contrast_mexhat_id__moe8/base_circuit.json --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/02_contrast_mexhat_id__moe8.mexhat_fill.select.json",
+   "winner": "pipeline/circuits_data/mexhat_id__moe8/mexhat_fill/circuits/eap_top228",
+   "candidates": [
+    {
+     "a": 0.947654,
+     "a_clean": 0.983198,
+     "a_corrupt": 0.963849,
+     "candidate": "pipeline/circuits_data/mexhat_id__moe8/mexhat_fill/circuits/eap_top228",
+     "n_edges": 220,
+     "n_nodes": 33,
+     "passes": true,
+     "selection_score": 0.071264
+    },
+    {
+     "a": 0.323904,
+     "a_clean": 0.580957,
+     "a_corrupt": 0.557536,
+     "candidate": "pipeline/circuits_data/mexhat_id__moe8/mexhat_fill/circuits/eap_top30",
+     "n_edges": 30,
+     "n_nodes": 11,
+     "passes": false,
+     "selection_score": 0.680729
+    },
+    {
+     "a": 0.629217,
+     "a_clean": 0.801935,
+     "a_corrupt": 0.784623,
+     "candidate": "pipeline/circuits_data/mexhat_id__moe8/mexhat_fill/circuits/eap_top53",
+     "n_edges": 51,
+     "n_nodes": 11,
+     "passes": false,
+     "selection_score": 0.671129
+    },
+    {
+     "a": 0.991361,
+     "a_clean": 0.996945,
+     "a_corrupt": 0.994399,
+     "candidate": "pipeline/circuits_data/mexhat_id__moe8/mexhat_fill/circuits/eap_top608",
+     "n_edges": 608,
+     "n_nodes": 36,
+     "passes": true,
+     "selection_score": 0.0
+    },
+    {
+     "a": 0.704051,
+     "a_clean": 0.845723,
+     "a_corrupt": 0.832485,
+     "candidate": "pipeline/circuits_data/mexhat_id__moe8/mexhat_fill/circuits/eap_top76",
+     "n_edges": 75,
+     "n_nodes": 16,
+     "passes": false,
+     "selection_score": 0.528125
+    }
+   ]
+  }
+ ]
+}

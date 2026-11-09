@@ -1,0 +1,240 @@
+{
+ "model": "graviclump_id__moe4",
+ "circuit": "graviclump_mean",
+ "class": "ProbeCircuit",
+ "floor": 0.8,
+ "selected": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top23",
+ "selected_mode": "candidate",
+ "selection_rule": "maximize (1 - n_nodes/n_nodes_full) * (1 - n_edges/n_edges_full) among candidates with a > floor",
+ "n_nodes_full": 9,
+ "n_edges_full": 43,
+ "modes": [
+  {
+   "mode": "candidate",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model graviclump_id__moe4 --circuit graviclump_mean --select --probe-layer 0 --probe-readout position --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/04_probe_graviclump_id__moe4.graviclump_mean.select.json",
+   "winner": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top23",
+   "candidates": [
+    {
+     "a": 0.0,
+     "a_clean": 0.0,
+     "a_corrupt": 0.0,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top1",
+     "n_edges": 0,
+     "n_nodes": 0,
+     "passes": false,
+     "selection_score": 1.0
+    },
+    {
+     "a": 0.66752,
+     "a_clean": 0.785688,
+     "a_corrupt": 0.849599,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top17",
+     "n_edges": 17,
+     "n_nodes": 8,
+     "passes": false,
+     "selection_score": 0.067183
+    },
+    {
+     "a": 0.0,
+     "a_clean": 0.0,
+     "a_corrupt": 0.0,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top2",
+     "n_edges": 0,
+     "n_nodes": 0,
+     "passes": false,
+     "selection_score": 1.0
+    },
+    {
+     "a": 0.746982,
+     "a_clean": 0.822376,
+     "a_corrupt": 0.908323,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top20",
+     "n_edges": 20,
+     "n_nodes": 8,
+     "passes": false,
+     "selection_score": 0.059432
+    },
+    {
+     "a": 0.688015,
+     "a_clean": 0.776971,
+     "a_corrupt": 0.885509,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top23",
+     "n_edges": 23,
+     "n_nodes": 8,
+     "passes": false,
+     "selection_score": 0.05168
+    },
+    {
+     "a": 0.928626,
+     "a_clean": 0.935343,
+     "a_corrupt": 0.992818,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top26",
+     "n_edges": 26,
+     "n_nodes": 8,
+     "passes": true,
+     "selection_score": 0.043928
+    },
+    {
+     "a": 0.958775,
+     "a_clean": 0.966945,
+     "a_corrupt": 0.99155,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top30",
+     "n_edges": 30,
+     "n_nodes": 8,
+     "passes": true,
+     "selection_score": 0.033592
+    },
+    {
+     "a": 0.974983,
+     "a_clean": 0.983291,
+     "a_corrupt": 0.99155,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top34",
+     "n_edges": 34,
+     "n_nodes": 9,
+     "passes": true,
+     "selection_score": 0.0
+    },
+    {
+     "a": 1.0,
+     "a_clean": 1.0,
+     "a_corrupt": 1.0,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top38",
+     "n_edges": 38,
+     "n_nodes": 9,
+     "passes": true,
+     "selection_score": 0.0
+    },
+    {
+     "a": 1.0,
+     "a_clean": 1.0,
+     "a_corrupt": 1.0,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top43",
+     "n_edges": 43,
+     "n_nodes": 9,
+     "passes": true,
+     "selection_score": 0.0
+    },
+    {
+     "a": 0.021608,
+     "a_clean": 0.343262,
+     "a_corrupt": 0.062949,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_edit/circuits/eap_probe_graviclump_mean_top6",
+     "n_edges": 6,
+     "n_nodes": 3,
+     "passes": false,
+     "selection_score": 0.573643
+    },
+    {
+     "a": 0.0,
+     "a_clean": 0.0,
+     "a_corrupt": 0.0,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top1",
+     "n_edges": 0,
+     "n_nodes": 0,
+     "passes": false,
+     "selection_score": 1.0
+    },
+    {
+     "a": 0.44493,
+     "a_clean": 0.711587,
+     "a_corrupt": 0.625264,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top17",
+     "n_edges": 16,
+     "n_nodes": 7,
+     "passes": false,
+     "selection_score": 0.139535
+    },
+    {
+     "a": 0.0,
+     "a_clean": 0.0,
+     "a_corrupt": 0.0,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top2",
+     "n_edges": 0,
+     "n_nodes": 0,
+     "passes": false,
+     "selection_score": 1.0
+    },
+    {
+     "a": 0.746982,
+     "a_clean": 0.822376,
+     "a_corrupt": 0.908323,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top20",
+     "n_edges": 20,
+     "n_nodes": 8,
+     "passes": false,
+     "selection_score": 0.059432
+    },
+    {
+     "a": 0.817886,
+     "a_clean": 0.854341,
+     "a_corrupt": 0.95733,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top23",
+     "n_edges": 23,
+     "n_nodes": 8,
+     "passes": true,
+     "selection_score": 0.05168
+    },
+    {
+     "a": 0.903259,
+     "a_clean": 0.911733,
+     "a_corrupt": 0.990706,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top26",
+     "n_edges": 25,
+     "n_nodes": 8,
+     "passes": true,
+     "selection_score": 0.046512
+    },
+    {
+     "a": 0.947249,
+     "a_clean": 0.955321,
+     "a_corrupt": 0.99155,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top30",
+     "n_edges": 28,
+     "n_nodes": 8,
+     "passes": true,
+     "selection_score": 0.03876
+    },
+    {
+     "a": 0.995278,
+     "a_clean": 0.995278,
+     "a_corrupt": 1.0,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top34",
+     "n_edges": 34,
+     "n_nodes": 9,
+     "passes": true,
+     "selection_score": 0.0
+    },
+    {
+     "a": 1.0,
+     "a_clean": 1.0,
+     "a_corrupt": 1.0,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top38",
+     "n_edges": 38,
+     "n_nodes": 9,
+     "passes": true,
+     "selection_score": 0.0
+    },
+    {
+     "a": 1.0,
+     "a_clean": 1.0,
+     "a_corrupt": 1.0,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top43",
+     "n_edges": 43,
+     "n_nodes": 9,
+     "passes": true,
+     "selection_score": 0.0
+    },
+    {
+     "a": 0.01345,
+     "a_clean": 0.239375,
+     "a_corrupt": 0.056189,
+     "candidate": "pipeline/circuits_data/graviclump_id__moe4/graviclump_full/circuits/eap_probe_graviclump_mean_top6",
+     "n_edges": 5,
+     "n_nodes": 2,
+     "passes": false,
+     "selection_score": 0.687339
+    }
+   ]
+  }
+ ]
+}

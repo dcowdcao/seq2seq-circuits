@@ -1,0 +1,184 @@
+{
+ "model": "schmitt_id__moe8",
+ "circuit": "schmitt_noband",
+ "class": "DomainCircuit",
+ "repo_class": "SchmittNobandCircuit",
+ "ablation": "mean",
+ "floor": 0.9,
+ "seed": 1,
+ "a": 1.0,
+ "a_clean": 1.0,
+ "a_corrupt": null,
+ "passes": true,
+ "n_nodes": 12,
+ "n_nodes_full": 36,
+ "n_edges": 33,
+ "n_edges_full": 1519,
+ "selection_score": 0.652183,
+ "nodes": [
+  "a0.h1",
+  "a0.h2",
+  "a0.h3",
+  "a0.h4",
+  "a0.h5",
+  "a0.h6",
+  "m0",
+  "m1",
+  "a2.h2",
+  "m2",
+  "a3.h1",
+  "m3"
+ ],
+ "edges": [
+  [
+   "input",
+   "a0.h1<k>"
+  ],
+  [
+   "input",
+   "a0.h1<v>"
+  ],
+  [
+   "input",
+   "a0.h2<k>"
+  ],
+  [
+   "input",
+   "a0.h2<v>"
+  ],
+  [
+   "input",
+   "a0.h3<k>"
+  ],
+  [
+   "input",
+   "a0.h3<v>"
+  ],
+  [
+   "input",
+   "a0.h4<q>"
+  ],
+  [
+   "input",
+   "a0.h4<v>"
+  ],
+  [
+   "input",
+   "a0.h5<k>"
+  ],
+  [
+   "input",
+   "a0.h5<v>"
+  ],
+  [
+   "input",
+   "a0.h6<k>"
+  ],
+  [
+   "input",
+   "a0.h6<v>"
+  ],
+  [
+   "a0.h1",
+   "m0"
+  ],
+  [
+   "a0.h2",
+   "m0"
+  ],
+  [
+   "a0.h3",
+   "m0"
+  ],
+  [
+   "a0.h4",
+   "m0"
+  ],
+  [
+   "a0.h5",
+   "m0"
+  ],
+  [
+   "a0.h6",
+   "m0"
+  ],
+  [
+   "a0.h5",
+   "m1"
+  ],
+  [
+   "m0",
+   "m1"
+  ],
+  [
+   "m0",
+   "a2.h2<q>"
+  ],
+  [
+   "m0",
+   "m2"
+  ],
+  [
+   "m0",
+   "a3.h1<q>"
+  ],
+  [
+   "m0",
+   "a3.h1<v>"
+  ],
+  [
+   "m0",
+   "m3"
+  ],
+  [
+   "a0.h5",
+   "logits"
+  ],
+  [
+   "a0.h6",
+   "logits"
+  ],
+  [
+   "m0",
+   "logits"
+  ],
+  [
+   "m1",
+   "logits"
+  ],
+  [
+   "a2.h2",
+   "logits"
+  ],
+  [
+   "m2",
+   "logits"
+  ],
+  [
+   "a3.h1",
+   "logits"
+  ],
+  [
+   "m3",
+   "logits"
+  ]
+ ],
+ "reference": {
+  "empty": {
+   "a": 0.0005,
+   "a_clean": 0.0005,
+   "a_corrupt": null
+  },
+  "model": {
+   "a": 1.0,
+   "a_clean": 1.0,
+   "a_corrupt": null
+  },
+  "note": "model = the unablated model under the same metric (the full circuit up to float noise; 1 by construction for interchange, by definition for probe classes); empty = no edges"
+ },
+ "node_definition": "attention heads a{l}.h{h} plus one node per MLP/MoE block m{l} (all experts of a layer form one node); the input embedding and the terminal (logits, or the probe site for probe classes) are edge endpoints, not nodes",
+ "edge_definition": "(writer, reader) pairs; writers = input embedding, heads, MLP/MoE blocks; readers = each head's q/k/v input (separately), each MLP input, the terminal",
+ "n_rows": 10000,
+ "model_seq_acc": 1.0,
+ "command": "python pipeline/find_circuits/evaluate_circuit.py --model schmitt_id__moe8 --circuit schmitt_noband --candidate results/showcase/01_domain_schmitt_id__moe8/circuit.json --device cpu --seed 1 --threads 4 --out <out.json>"
+}

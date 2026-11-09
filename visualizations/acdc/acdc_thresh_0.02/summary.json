@@ -1,0 +1,6887 @@
+{
+  "threshold": 0.02,
+  "tau_folder": "acdc_thresh_0.02",
+  "metric": "kl_divergence(clean||patched) over answer positions 9..18",
+  "corruption_scheme": "random",
+  "num_examples": 20,
+  "n_prunable_edges_initial": 1377,
+  "n_edges_surviving": 371,
+  "n_edges_count_no_edges": 371,
+  "init_kl": 0.0,
+  "final_kl": 2.898073673248291,
+  "steps": 188,
+  "heads_in_circuit": [
+    "L0H0",
+    "L0H1",
+    "L0H2",
+    "L0H3",
+    "L0H4",
+    "L0H5",
+    "L0H6",
+    "L0H7",
+    "L1H0",
+    "L1H1",
+    "L1H2",
+    "L1H3",
+    "L1H4",
+    "L1H5",
+    "L1H6",
+    "L1H7",
+    "L2H0",
+    "L2H1",
+    "L2H2",
+    "L2H3",
+    "L2H5",
+    "L2H6",
+    "L2H7",
+    "L3H3",
+    "L3H4",
+    "L3H6",
+    "L3H7"
+  ],
+  "head_roles": {
+    "L0H0": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L0H1": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L0H2": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L0H3": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L0H4": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L0H5": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L0H6": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L0H7": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L1H0": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L1H1": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L1H2": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L1H3": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L1H4": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L1H5": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L1H6": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L1H7": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L2H0": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L2H1": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L2H2": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L2H3": [
+      "result"
+    ],
+    "L2H5": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L2H6": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L2H7": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L3H3": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L3H4": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L3H6": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ],
+    "L3H7": [
+      "k",
+      "k_input",
+      "q",
+      "q_input",
+      "result",
+      "v",
+      "v_input"
+    ]
+  },
+  "surviving_edges": [
+    {
+      "receiver": "blocks.0.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a0.7_v",
+      "sender": "blocks.0.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 2.916934013366699
+    },
+    {
+      "receiver": "blocks.0.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a0.7_vin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 2.916934013366699
+    },
+    {
+      "receiver": "blocks.0.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a0.4_v",
+      "sender": "blocks.0.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 1.5105843544006348
+    },
+    {
+      "receiver": "blocks.0.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a0.4_vin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 1.5105843544006348
+    },
+    {
+      "receiver": "blocks.0.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a0.2_v",
+      "sender": "blocks.0.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 1.103630542755127
+    },
+    {
+      "receiver": "blocks.0.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a0.2_vin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 1.103630542755127
+    },
+    {
+      "receiver": "blocks.1.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_v",
+      "sender": "blocks.1.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.9796488285064697
+    },
+    {
+      "receiver": "blocks.0.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a0.1_v",
+      "sender": "blocks.0.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.9408750534057617
+    },
+    {
+      "receiver": "blocks.0.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a0.1_vin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.9408750534057617
+    },
+    {
+      "receiver": "blocks.1.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_v",
+      "sender": "blocks.1.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.8042190074920654
+    },
+    {
+      "receiver": "blocks.0.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a0.7_k",
+      "sender": "blocks.0.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.7834844589233398
+    },
+    {
+      "receiver": "blocks.0.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a0.7_kin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.7834844589233398
+    },
+    {
+      "receiver": "blocks.1.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_v",
+      "sender": "blocks.1.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.634636640548706
+    },
+    {
+      "receiver": "blocks.2.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_v",
+      "sender": "blocks.2.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a2.1_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.595425009727478
+    },
+    {
+      "receiver": "blocks.1.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_v",
+      "sender": "blocks.1.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.5801024436950684
+    },
+    {
+      "receiver": "blocks.2.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_v",
+      "sender": "blocks.2.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a2.7_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.570382833480835
+    },
+    {
+      "receiver": "blocks.0.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a0.6_v",
+      "sender": "blocks.0.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.5392947196960449
+    },
+    {
+      "receiver": "blocks.0.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a0.6_vin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.5392947196960449
+    },
+    {
+      "receiver": "blocks.0.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a0.2_k",
+      "sender": "blocks.0.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.5220739841461182
+    },
+    {
+      "receiver": "blocks.0.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a0.2_kin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.5220739841461182
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.5180928707122803
+    },
+    {
+      "receiver": "blocks.0.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a0.1_k",
+      "sender": "blocks.0.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.4743824005126953
+    },
+    {
+      "receiver": "blocks.0.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a0.1_kin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.4743824005126953
+    },
+    {
+      "receiver": "blocks.1.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_v",
+      "sender": "blocks.1.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.45195841789245605
+    },
+    {
+      "receiver": "blocks.1.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_q",
+      "sender": "blocks.1.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.43740010261535645
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.4120292663574219
+    },
+    {
+      "receiver": "blocks.2.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_v",
+      "sender": "blocks.2.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a2.5_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.4065408706665039
+    },
+    {
+      "receiver": "blocks.0.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a0.4_k",
+      "sender": "blocks.0.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.3869314193725586
+    },
+    {
+      "receiver": "blocks.0.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a0.4_kin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.3869314193725586
+    },
+    {
+      "receiver": "blocks.1.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_q",
+      "sender": "blocks.1.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.3861420154571533
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.37142088264226913
+    },
+    {
+      "receiver": "blocks.2.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_v",
+      "sender": "blocks.2.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a2.2_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.36140167713165283
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.33609580993652344
+    },
+    {
+      "receiver": "blocks.1.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_v",
+      "sender": "blocks.1.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.3348982334136963
+    },
+    {
+      "receiver": "blocks.1.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_k",
+      "sender": "blocks.1.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.33055686950683594
+    },
+    {
+      "receiver": "blocks.1.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_q",
+      "sender": "blocks.1.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.3214542865753174
+    },
+    {
+      "receiver": "blocks.0.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a0.5_v",
+      "sender": "blocks.0.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.3094496726989746
+    },
+    {
+      "receiver": "blocks.0.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a0.5_vin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.3094496726989746
+    },
+    {
+      "receiver": "blocks.2.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_v",
+      "sender": "blocks.2.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a2.0_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.3057677745819092
+    },
+    {
+      "receiver": "blocks.2.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a2.6_v",
+      "sender": "blocks.2.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a2.6_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.3037576675415039
+    },
+    {
+      "receiver": "blocks.0.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a0.3_v",
+      "sender": "blocks.0.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.3037109375
+    },
+    {
+      "receiver": "blocks.0.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a0.3_vin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.3037104606628418
+    },
+    {
+      "receiver": "blocks.2.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_q",
+      "sender": "blocks.2.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a2.1_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.30358731746673584
+    },
+    {
+      "receiver": "blocks.0.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a0.6_k",
+      "sender": "blocks.0.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.3020186424255371
+    },
+    {
+      "receiver": "blocks.0.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a0.6_kin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.3020186424255371
+    },
+    {
+      "receiver": "blocks.1.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_q",
+      "sender": "blocks.1.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.28830528259277344
+    },
+    {
+      "receiver": "blocks.1.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_k",
+      "sender": "blocks.1.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.27701640129089355
+    },
+    {
+      "receiver": "blocks.1.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_k",
+      "sender": "blocks.1.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.2731788158416748
+    },
+    {
+      "receiver": "blocks.2.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_q",
+      "sender": "blocks.2.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a2.7_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.2680511474609375
+    },
+    {
+      "receiver": "blocks.1.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_q",
+      "sender": "blocks.1.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.2648277282714844
+    },
+    {
+      "receiver": "blocks.0.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a0.0_v",
+      "sender": "blocks.0.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.25690793991088867
+    },
+    {
+      "receiver": "blocks.0.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a0.0_vin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.25690746307373047
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.24518942832946777
+    },
+    {
+      "receiver": "blocks.2.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_q",
+      "sender": "blocks.2.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a2.2_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.24366772174835205
+    },
+    {
+      "receiver": "blocks.0.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a0.7_qin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.24141573905944824
+    },
+    {
+      "receiver": "blocks.0.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a0.7_q",
+      "sender": "blocks.0.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.24141550064086914
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.2144937515258789
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.20713210105895996
+    },
+    {
+      "receiver": "blocks.0.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a0.3_k",
+      "sender": "blocks.0.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.2056746482849121
+    },
+    {
+      "receiver": "blocks.0.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a0.3_kin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.2056746482849121
+    },
+    {
+      "receiver": "blocks.2.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_k",
+      "sender": "blocks.2.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a2.1_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.20333945751190186
+    },
+    {
+      "receiver": "blocks.2.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_q",
+      "sender": "blocks.2.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a2.5_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.20219933986663818
+    },
+    {
+      "receiver": "blocks.0.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a0.2_q",
+      "sender": "blocks.0.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.1955101490020752
+    },
+    {
+      "receiver": "blocks.0.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a0.2_qin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.1955099105834961
+    },
+    {
+      "receiver": "blocks.0.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a0.5_q",
+      "sender": "blocks.0.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.1952204704284668
+    },
+    {
+      "receiver": "blocks.0.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a0.5_qin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.1952204704284668
+    },
+    {
+      "receiver": "blocks.2.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_k",
+      "sender": "blocks.2.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a2.7_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.18991339206695557
+    },
+    {
+      "receiver": "blocks.1.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_q",
+      "sender": "blocks.1.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.18929481506347656
+    },
+    {
+      "receiver": "blocks.1.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_k",
+      "sender": "blocks.1.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.18293452262878418
+    },
+    {
+      "receiver": "blocks.3.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_q",
+      "sender": "blocks.3.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a3.4_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.17840054631233215
+    },
+    {
+      "receiver": "blocks.3.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_q",
+      "sender": "blocks.3.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a3.3_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.17385590076446533
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.17147135734558105
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.17138886451721191
+    },
+    {
+      "receiver": "blocks.3.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_v",
+      "sender": "blocks.3.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a3.3_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.16378605365753174
+    },
+    {
+      "receiver": "blocks.3.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_v",
+      "sender": "blocks.3.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a3.4_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.1622459590435028
+    },
+    {
+      "receiver": "blocks.2.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_k",
+      "sender": "blocks.2.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a2.2_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.16093087196350098
+    },
+    {
+      "receiver": "blocks.2.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_q",
+      "sender": "blocks.2.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a2.0_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.16067874431610107
+    },
+    {
+      "receiver": "blocks.0.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a0.1_q",
+      "sender": "blocks.0.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.16055035591125488
+    },
+    {
+      "receiver": "blocks.0.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a0.1_qin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.16055011749267578
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.14946746826171875
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.1479477882385254
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.1475358009338379
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.14742183685302734
+    },
+    {
+      "receiver": "blocks.1.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a1.0_v",
+      "sender": "blocks.1.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a1.0_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.1468648910522461
+    },
+    {
+      "receiver": "blocks.2.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_k",
+      "sender": "blocks.2.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a2.5_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.14610803127288818
+    },
+    {
+      "receiver": "blocks.0.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a0.5_k",
+      "sender": "blocks.0.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.1416633129119873
+    },
+    {
+      "receiver": "blocks.0.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a0.5_kin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.1416633129119873
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.14046645164489746
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.1355750560760498
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.13552594184875488
+    },
+    {
+      "receiver": "blocks.1.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_k",
+      "sender": "blocks.1.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.132951021194458
+    },
+    {
+      "receiver": "blocks.3.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a3.6_q",
+      "sender": "blocks.3.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a3.6_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.13243240118026733
+    },
+    {
+      "receiver": "blocks.2.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a2.6_q",
+      "sender": "blocks.2.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a2.6_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.12759017944335938
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.12700247764587402
+    },
+    {
+      "receiver": "blocks.3.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a3.6_v",
+      "sender": "blocks.3.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a3.6_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.12233096361160278
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.12147188186645508
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.11671328544616699
+    },
+    {
+      "receiver": "blocks.2.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_k",
+      "sender": "blocks.2.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a2.0_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.11586320400238037
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.11528778076171875
+    },
+    {
+      "receiver": "blocks.1.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a1.0_q",
+      "sender": "blocks.1.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a1.0_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.11437177658081055
+    },
+    {
+      "receiver": "blocks.1.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_k",
+      "sender": "blocks.1.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.11400175094604492
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.11285722255706787
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.11266756057739258
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.10854125022888184
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.1085226982831955
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.10640525817871094
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.10507702827453613
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.10303115844726562
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.10303020477294922
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.10232734680175781
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.10106480121612549
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.10104489326477051
+    },
+    {
+      "receiver": "blocks.3.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_k",
+      "sender": "blocks.3.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a3.3_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.101036936044693
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.1006784439086914
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.10054564476013184
+    },
+    {
+      "receiver": "blocks.0.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a0.0_k",
+      "sender": "blocks.0.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.0986778736114502
+    },
+    {
+      "receiver": "blocks.0.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a0.0_kin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0986778736114502
+    },
+    {
+      "receiver": "blocks.1.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a1.3_v",
+      "sender": "blocks.1.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.09832978248596191
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.09799432754516602
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.09786105155944824
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.09625673294067383
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.09548664093017578
+    },
+    {
+      "receiver": "blocks.0.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a0.4_q",
+      "sender": "blocks.0.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.093902587890625
+    },
+    {
+      "receiver": "blocks.0.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a0.4_qin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.093902587890625
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0936431884765625
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.09358096122741699
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.09220218658447266
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.09131669998168945
+    },
+    {
+      "receiver": "blocks.3.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_k",
+      "sender": "blocks.3.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a3.4_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.09035593271255493
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.08991146087646484
+    },
+    {
+      "receiver": "blocks.2.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a2.6_k",
+      "sender": "blocks.2.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a2.6_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.08676505088806152
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0866544246673584
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.08178329467773438
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.08068394660949707
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0806434154510498
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07802104949951172
+    },
+    {
+      "receiver": "blocks.3.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a3.6_k",
+      "sender": "blocks.3.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a3.6_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.07676105201244354
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07625889778137207
+    },
+    {
+      "receiver": "blocks.0.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a0.0_q",
+      "sender": "blocks.0.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.07518386840820312
+    },
+    {
+      "receiver": "blocks.0.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a0.0_qin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07518386840820312
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07482314109802246
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0747983455657959
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07445764541625977
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07411050796508789
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07303786277770996
+    },
+    {
+      "receiver": "blocks.0.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a0.3_q",
+      "sender": "blocks.0.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.07265281677246094
+    },
+    {
+      "receiver": "blocks.0.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a0.3_qin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07265281677246094
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07260870933532715
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07222819328308105
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07216429710388184
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07168912887573242
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07063877582550049
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.07034909725189209
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06909060478210449
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06899525225162506
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06791496276855469
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06726455688476562
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a2.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06654633209109306
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a2.6_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.065987229347229
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06353235244750977
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06321680545806885
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06205320358276367
+    },
+    {
+      "receiver": "blocks.3.attn.hook_v",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a3.7_v",
+      "sender": "blocks.3.hook_v_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a3.7_vin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.06187507510185242
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06145143508911133
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06135129928588867
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.061127662658691406
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.06034445762634277
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05939507484436035
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05847358703613281
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05833101272583008
+    },
+    {
+      "receiver": "blocks.1.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a1.0_k",
+      "sender": "blocks.1.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a1.0_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.05828547477722168
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05745100975036621
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a1.0_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.056990623474121094
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05668830871582031
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05665183067321777
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05448508262634277
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05438947677612305
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05382871627807617
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05381202697753906
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.3.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a3.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05376893747597933
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.053466200828552246
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05335855484008789
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05331707000732422
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0527724027633667
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.052550673484802246
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.051872968673706055
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05127978324890137
+    },
+    {
+      "receiver": "blocks.1.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a1.3_k",
+      "sender": "blocks.1.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.05093121528625488
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05063807964324951
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.05044722557067871
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.050134897232055664
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04969795048236847
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04846024513244629
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a2.6_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04817771911621094
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.047023773193359375
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.047014713287353516
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0469202995300293
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.045494914054870605
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04536890983581543
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.045258522033691406
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04525268077850342
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04503244161605835
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04452943801879883
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04444599151611328
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04440271854400635
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04434919357299805
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.044155120849609375
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04397106170654297
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04390251636505127
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a1.3_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04374432563781738
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0435795783996582
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.043341636657714844
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04334115982055664
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.043244123458862305
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0423130989074707
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a2.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.042190637439489365
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04193544387817383
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0419316291809082
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.041853904724121094
+    },
+    {
+      "receiver": "blocks.3.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a3.7_q",
+      "sender": "blocks.3.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a3.7_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.041844338178634644
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.3.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a3.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.041677272878587246
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04167497158050537
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.041632890701293945
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a2.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.04158299136906862
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a1.0_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.040578365325927734
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.040163516998291016
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.040048182010650635
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03987860679626465
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.039824724197387695
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03976798057556152
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.039740562438964844
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03938651084899902
+    },
+    {
+      "receiver": "blocks.1.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a1.3_q",
+      "sender": "blocks.1.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.0392148494720459
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.039049386978149414
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.038843512535095215
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03876447677612305
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0386350154876709
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03786170482635498
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03781604766845703
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a1.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03754162788391113
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03731656074523926
+    },
+    {
+      "receiver": "blocks.0.attn.hook_q",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a0.6_q",
+      "sender": "blocks.0.hook_q_input",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6_qin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.037120819091796875
+    },
+    {
+      "receiver": "blocks.0.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a0.6_qin",
+      "sender": "blocks.0.hook_resid_pre",
+      "sender_index": [
+        null
+      ],
+      "sender_label": "embed",
+      "edge_type": "ADDITION",
+      "effect_size": 0.037120819091796875
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03691363334655762
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03670382499694824
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03665781021118164
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03624129295349121
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03593087196350098
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a3.6_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03578662872314453
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03539383411407471
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03506875038146973
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.034950077533721924
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0346221923828125
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03392815589904785
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.033765554428100586
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.033147573471069336
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03311765193939209
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03304600715637207
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03283524513244629
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03279829025268555
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.032794833183288574
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03246879577636719
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03240787982940674
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_vin",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a2.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03239256143569946
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a1.4_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03211665153503418
+    },
+    {
+      "receiver": "blocks.3.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0319286584854126
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0317181795835495
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a1.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03144574165344238
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03123694658279419
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.031205952167510986
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.031003475189208984
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.030906200408935547
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.030871033668518066
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.030733346939086914
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.030697107315063477
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.030633211135864258
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.030445337295532227
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0304335355758667
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a2.6_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.030226588249206543
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03020024299621582
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03014671802520752
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_vin",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a2.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.03005942702293396
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a1.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.030032873153686523
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02991795539855957
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.029788389801979065
+    },
+    {
+      "receiver": "blocks.3.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.029750943183898926
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.029639482498168945
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02916395664215088
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a1.3_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02910923957824707
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a1.3_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.029017210006713867
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a1.0_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.028682231903076172
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_qin",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a2.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.028634309768676758
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02857208251953125
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02849447727203369
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02846395969390869
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02823507785797119
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a1.3_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.028221845626831055
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02775251865386963
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02774953842163086
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02762746810913086
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02761256694793701
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.027593374252319336
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.027530178427696228
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.027309894561767578
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_vin",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a2.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02708524465560913
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0268399715423584
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02677750587463379
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02662205696105957
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.026375293731689453
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a2.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02632210496813059
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a1.7_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.026287078857421875
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.026160024106502533
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a2.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02615826204419136
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02612900733947754
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.025972843170166016
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.025829315185546875
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a1.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.025737404823303223
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02569580078125
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02567887306213379
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.025561392307281494
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.025390625
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02524709701538086
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.025224685668945312
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a1.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.025206685066223145
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.025206327438354492
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02492976188659668
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a1.6_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02491450309753418
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a2.6_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.024800658226013184
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.024783968925476074
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a1.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.024759531021118164
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a1.2_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.024741172790527344
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.0245513916015625
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.024356365203857422
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.3.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a3.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02431600634008646
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_vin",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a2.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.024217069149017334
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_qin",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a2.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.024207472801208496
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a2.6_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02398836612701416
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.023977994918823242
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a3.6_qin",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a2.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.023939967155456543
+    },
+    {
+      "receiver": "blocks.3.attn.hook_k",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a3.7_k",
+      "sender": "blocks.3.hook_k_input",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a3.7_kin",
+      "edge_type": "DIRECT_COMPUTATION",
+      "effect_size": 0.023888275027275085
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a1.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.023796558380126953
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a1.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.023790717124938965
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02331829071044922
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02330183982849121
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a2.6_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02309417724609375
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.023012876510620117
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.022983312606811523
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a1.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.022913455963134766
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.022829294204711914
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02277195453643799
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a0.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.022358298301696777
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a1.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.022249937057495117
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        6
+      ],
+      "receiver_label": "a2.6_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.022188186645507812
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        6
+      ],
+      "sender_label": "a0.6",
+      "edge_type": "ADDITION",
+      "effect_size": 0.022013306617736816
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a2.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.021951493807137012
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        0
+      ],
+      "receiver_label": "a2.0_kin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a1.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02190232276916504
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_vin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a1.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02185535430908203
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.021802067756652832
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a0.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02149069309234619
+    },
+    {
+      "receiver": "blocks.1.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a1.3_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02127671241760254
+    },
+    {
+      "receiver": "blocks.2.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        2
+      ],
+      "receiver_label": "a2.2_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.021104097366333008
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        0
+      ],
+      "sender_label": "a1.0",
+      "edge_type": "ADDITION",
+      "effect_size": 0.021059036254882812
+    },
+    {
+      "receiver": "blocks.2.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        7
+      ],
+      "receiver_label": "a2.7_qin",
+      "sender": "blocks.1.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a1.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.021015167236328125
+    },
+    {
+      "receiver": "blocks.3.hook_resid_post",
+      "receiver_index": [
+        null
+      ],
+      "receiver_label": "resid_post",
+      "sender": "blocks.3.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        7
+      ],
+      "sender_label": "a3.7",
+      "edge_type": "ADDITION",
+      "effect_size": 0.021008656360208988
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a2.5_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        2
+      ],
+      "sender_label": "a0.2",
+      "edge_type": "ADDITION",
+      "effect_size": 0.020874977111816406
+    },
+    {
+      "receiver": "blocks.2.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a2.1_vin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.020844101905822754
+    },
+    {
+      "receiver": "blocks.3.hook_v_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a3.3_vin",
+      "sender": "blocks.2.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a2.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.020765185356140137
+    },
+    {
+      "receiver": "blocks.3.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        4
+      ],
+      "receiver_label": "a3.4_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        4
+      ],
+      "sender_label": "a0.4",
+      "edge_type": "ADDITION",
+      "effect_size": 0.020617663860321045
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        5
+      ],
+      "receiver_label": "a1.5_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        1
+      ],
+      "sender_label": "a0.1",
+      "edge_type": "ADDITION",
+      "effect_size": 0.020546436309814453
+    },
+    {
+      "receiver": "blocks.1.hook_q_input",
+      "receiver_index": [
+        null,
+        null,
+        3
+      ],
+      "receiver_label": "a1.3_qin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        5
+      ],
+      "sender_label": "a0.5",
+      "edge_type": "ADDITION",
+      "effect_size": 0.02019643783569336
+    },
+    {
+      "receiver": "blocks.1.hook_k_input",
+      "receiver_index": [
+        null,
+        null,
+        1
+      ],
+      "receiver_label": "a1.1_kin",
+      "sender": "blocks.0.attn.hook_result",
+      "sender_index": [
+        null,
+        null,
+        3
+      ],
+      "sender_label": "a0.3",
+      "edge_type": "ADDITION",
+      "effect_size": 0.020044565200805664
+    }
+  ],
+  "data": {
+    "store_label": "acdc/acdc_thresh_0.02/random",
+    "path": "datasets/acdc/acdc_thresh_0.02/random.json",
+    "scheme": "random",
+    "num_examples": 20
+  },
+  "files": {
+    "summary_json": "visualizations/acdc/acdc_thresh_0.02/summary.json",
+    "circuit_gv": "visualizations/acdc/acdc_thresh_0.02/circuit.gv",
+    "circuit_pth": "visualizations/acdc/acdc_thresh_0.02/circuit.pth",
+    "circuit_png": "visualizations/acdc/acdc_thresh_0.02/circuit.png"
+  }
+}

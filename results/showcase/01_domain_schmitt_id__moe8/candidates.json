@@ -1,0 +1,80 @@
+{
+ "model": "schmitt_id__moe8",
+ "circuit": "schmitt_noband",
+ "class": "DomainCircuit",
+ "floor": 0.9,
+ "selected": "pipeline/circuits_data/schmitt_id__moe8/schmitt_noband/circuits/eap_top48",
+ "selected_mode": "candidate",
+ "selection_rule": "maximize (1 - n_nodes/n_nodes_full) * (1 - n_edges/n_edges_full) among candidates with a > floor",
+ "n_nodes_full": 36,
+ "n_edges_full": 1519,
+ "modes": [
+  {
+   "mode": "candidate",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model schmitt_id__moe8 --circuit schmitt_noband --select --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/01_domain_schmitt_id__moe8.schmitt_noband.select.json",
+   "winner": "pipeline/circuits_data/schmitt_id__moe8/schmitt_noband/circuits/eap_top48",
+   "candidates": [
+    {
+     "a": 1.0,
+     "a_clean": 1.0,
+     "a_corrupt": null,
+     "candidate": "pipeline/circuits_data/schmitt_id__moe8/schmitt_noband/circuits/eap_top228",
+     "n_edges": 223,
+     "n_nodes": 35,
+     "passes": true,
+     "selection_score": 0.0237
+    },
+    {
+     "a": 0.7492,
+     "a_clean": 0.7492,
+     "a_corrupt": null,
+     "candidate": "pipeline/circuits_data/schmitt_id__moe8/schmitt_noband/circuits/eap_top30",
+     "n_edges": 23,
+     "n_nodes": 9,
+     "passes": false,
+     "selection_score": 0.738644
+    },
+    {
+     "a": 0.7472,
+     "a_clean": 0.7472,
+     "a_corrupt": null,
+     "candidate": "pipeline/circuits_data/schmitt_id__moe8/schmitt_noband/circuits/eap_top39",
+     "n_edges": 26,
+     "n_nodes": 10,
+     "passes": false,
+     "selection_score": 0.70986
+    },
+    {
+     "a": 1.0,
+     "a_clean": 1.0,
+     "a_corrupt": null,
+     "candidate": "pipeline/circuits_data/schmitt_id__moe8/schmitt_noband/circuits/eap_top48",
+     "n_edges": 33,
+     "n_nodes": 12,
+     "passes": true,
+     "selection_score": 0.652183
+    },
+    {
+     "a": 1.0,
+     "a_clean": 1.0,
+     "a_corrupt": null,
+     "candidate": "pipeline/circuits_data/schmitt_id__moe8/schmitt_noband/circuits/eap_top608",
+     "n_edges": 608,
+     "n_nodes": 36,
+     "passes": true,
+     "selection_score": 0.0
+    },
+    {
+     "a": 1.0,
+     "a_clean": 1.0,
+     "a_corrupt": null,
+     "candidate": "pipeline/circuits_data/schmitt_id__moe8/schmitt_noband/circuits/eap_top76",
+     "n_edges": 58,
+     "n_nodes": 20,
+     "passes": true,
+     "selection_score": 0.427474
+    }
+   ]
+  }
+ ]
+}

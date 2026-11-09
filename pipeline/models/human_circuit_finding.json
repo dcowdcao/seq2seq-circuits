@@ -1,0 +1,364 @@
+{
+  "_README": "Phase-2a circuit intake (the human-in-the-loop step between training and analysis). Add one object to \"requests\" per sub-circuit you want isolated for a model, then author each entry as a Circuit subclass in models/circuits.py (conditions from models/conditions.py) and run phase 2b (--stages data) to generate each circuit's per-circuit dataset file inputs.json (re-deploy the Modal image first if you run with --modal). There is no 'whole' circuit -- declare only the sub-circuits you want isolated. Full field guide + tips + worked examples: docs/reference/declaring_circuits.md.",
+  "_field_guide": "docs/reference/declaring_circuits.md",
+  "_methods": {
+    "digits": "(a) restrict/exclude RAW digits -- detail e.g. \"exclude digit 3\" or \"digits in {0,1}\" -> domain_sampler([...]).",
+    "condition": "(b) keep inputs satisfying a condition -- raw-digit condition (e.g. \"every value <= 4\") -> domain_sampler; running/accumulated-state condition (e.g. \"total digit-sum <= 12\") -> a constructive custom sampler, NOT rejection.",
+    "output_positions": "(c) score only some OUTPUT positions -- detail e.g. \"indices 0,2,4,6,8\" -> answer_index_subset, full input domain.",
+    "custom": "(d) a precise custom (batch, seed) -> LongTensor[batch, n] input sampler, described exactly in 'detail'."
+  },
+  "_request_schema": {
+    "model": "DSL algorithm_id, e.g. segrev3_id (required)",
+    "checkpoint": "\"trained\" or \"imported as models/<dir>/<name>.pt\" (informational)",
+    "slug": "short_lowercase circuit folder name, e.g. reverse_only (required; becomes a folder under circuits_data/<model>/ and figures/<model>/)",
+    "isolate": "plain-English description of the behaviour this circuit isolates (required)",
+    "isolate_by": {
+      "method": "one of _methods keys: digits | condition | output_positions | custom (required)",
+      "detail": "the exact rule (required)"
+    },
+    "faithfulness_target": "optional float in (0,1], informational only (no code reads it): the smallest stage's floor is run_model_pipeline.py --smallest-target, default 0.85 (absolute whole-sequence accuracy floor; winner maximizes (1-n/N)*(1-e/E))"
+  },
+  "requests": [
+    {
+      "model": "segrev3_id",
+      "checkpoint": "trained",
+      "slug": "reverse_only",
+      "isolate": "the plain whole-sequence reverse: with no copies of the boundary digit 3 present, the whole input is a single segment, so the model just reverses",
+      "isolate_by": {
+        "method": "digits",
+        "detail": "exclude digit 3"
+      },
+      "faithfulness_target": 0.95
+    },
+    {
+      "model": "areset13_id",
+      "checkpoint": "trained",
+      "slug": "areset13_accum",
+      "isolate": "the running-sum accumulation (prefix-sum mod 10) with the threshold-13 reset never triggered, so the reset machinery is unexercised and ablatable",
+      "isolate_by": {
+        "method": "condition",
+        "detail": "total digit-sum <= 12 (running-state condition -> constructive bounded_sum_sampler(12), not rejection)"
+      },
+      "faithfulness_target": 0.95
+    },
+    {
+      "model": "reccount_id",
+      "checkpoint": "trained",
+      "slug": "single_record",
+      "isolate": "the bare record-detect-and-increment core: with digits in {0,1} the counter can only ever step 1->2 at the first 1 following a leading 0-run (or stay all-1s when x[0]=1), so the task collapses to an x[0]-gate AND a prefix-OR over 'has a 1 appeared yet' selecting output 1 vs 2; this isolates first-strict-improvement detection plus a single increment, with general running-max tracking, the multi-record ladder, and the mod-10 wrap all unexercised/ablatable",
+      "isolate_by": {
+        "method": "digits",
+        "detail": "digits in {0,1}"
+      },
+      "faithfulness_target": 0.95
+    },
+    {
+      "model": "rcnt3_id",
+      "checkpoint": "trained",
+      "slug": "single_three",
+      "isolate": "With at most one 3 in the input, the running-count-of-3 (mod 10) collapses to detect-the-single-3 + prefix-OR (0->1): output is 0 until the lone 3 appears, then 1 for every position onward (all-0 when no 3). This isolates single-occurrence detection plus a single increment; the multi-step counter ladder and the mod-10 wrap are unexercised/ablatable.",
+      "isolate_by": {
+        "method": "condition",
+        "detail": "at most 1 occurrence of digit 3 (global occurrence-count condition -> constructive bounded_count_sampler(digit=3, max_count=1), NOT rejection)"
+      },
+      "faithfulness_target": 0.95
+    },
+    {
+      "model": "psumodd_id",
+      "checkpoint": "trained",
+      "slug": "odd_only",
+      "isolate": "the modular accumulator: with all digits odd-valued ({1,3,5,7,9}) every digit contributes, so the odd-parity detector is always-on (unexercised) and the task collapses to a plain prefix-sum (mod 10) of all digits. Isolates the running-sum accumulator plus the mod-10 wrap.",
+      "isolate_by": {
+        "method": "digits",
+        "detail": "digits in {1,3,5,7,9} (all odd-valued) -> domain_sampler([1,3,5,7,9])"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "dblodd_id",
+      "checkpoint": "trained",
+      "slug": "one_odd",
+      "isolate": "exactly one odd-valued digit in the input: the nine even digits pass through unchanged and the single odd digit is doubled (mod 10), so the whole output is even-valued. Isolates 'localize the lone odd digit + double it' -- the parity-classify gate fires (selects the doubling branch) at exactly one position while every other position takes the identity/passthrough branch. The simultaneous-multi-doubling and the parity contrast over a mixed sequence are unexercised.",
+      "isolate_by": {
+        "method": "condition",
+        "detail": "exactly 1 odd-valued digit (global parity-count condition -> constructive one_odd_sampler: pick one position for a uniform odd digit {1,3,5,7,9}, fill the rest with uniform even digits {0,2,4,6,8}; NOT rejection)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "dblodd_id",
+      "checkpoint": "trained",
+      "slug": "all_odd",
+      "isolate": "all digits odd-valued ({1,3,5,7,9}): every digit is doubled, so the parity-classify detector is always-on (always selects the doubling branch) and unexercised/ablatable, and DoubleOdd collapses to a pure position-wise (2*x) mod 10 map (= MapMul(2)). Isolates the doubling arithmetic alone, with the parity gate and the identity/passthrough branch unexercised.",
+      "isolate_by": {
+        "method": "digits",
+        "detail": "digits in {1,3,5,7,9} (all odd-valued) -> domain_sampler([1,3,5,7,9])"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "prod_id",
+      "checkpoint": "trained",
+      "slug": "prod_locate",
+      "isolate": "running-product locate-and-broadcast a single non-1 factor",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "exactly one digit != 1 (one_in_set_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "cntodd_id",
+      "checkpoint": "trained",
+      "slug": "cntodd_parity",
+      "isolate": "parity detector via a single odd digit",
+      "isolate_by": {
+        "method": "condition",
+        "detail": "exactly one odd digit (one_odd_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "recordind_id",
+      "checkpoint": "trained",
+      "slug": "recordind_binary",
+      "isolate": "running-max record detector on the binary alphabet",
+      "isolate_by": {
+        "method": "digits",
+        "detail": "digits in {0,1}"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "novel_id",
+      "checkpoint": "trained",
+      "slug": "novel_onerepeat",
+      "isolate": "novelty/seen-before detector via a single repeat",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "exactly one repeated value (one_repeat_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "fixedpoint_id",
+      "checkpoint": "trained",
+      "slug": "fixedpoint_onehit",
+      "isolate": "value==index detector via a single fixed point",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "exactly one position with x[i]==i (one_fixedpoint_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "reset3_id",
+      "checkpoint": "trained",
+      "slug": "reset3_singleramp",
+      "isolate": "single-reset distance ramp",
+      "isolate_by": {
+        "method": "condition",
+        "detail": "at most one copy of digit 3 (bounded_count_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "tresetmax3_id",
+      "checkpoint": "trained",
+      "slug": "tresetmax3_runmax",
+      "isolate": "plain running maximum (reset disabled)",
+      "isolate_by": {
+        "method": "digits",
+        "detail": "exclude digit 3"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "walk12_id",
+      "checkpoint": "trained",
+      "slug": "walk12_downcount",
+      "isolate": "decreasing counter (up-branch disabled)",
+      "isolate_by": {
+        "method": "digits",
+        "detail": "exclude digit 1"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "sr12_id",
+      "checkpoint": "trained",
+      "slug": "sr12_setlatch",
+      "isolate": "cum-OR set-detector (reset disabled)",
+      "isolate_by": {
+        "method": "digits",
+        "detail": "exclude digit 2"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "holdge5_id",
+      "checkpoint": "trained",
+      "slug": "holdge5_onehold",
+      "isolate": "sample-and-hold register via a single qualifier",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "exactly one digit >= 5 (one_in_set_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "dep9f0_id",
+      "checkpoint": "trained",
+      "slug": "dep9f0_ramp",
+      "isolate": "decreasing accumulator (floor unexercised)",
+      "isolate_by": {
+        "method": "condition",
+        "detail": "total digit-sum <= 9 (bounded_sum_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "anc0_id",
+      "checkpoint": "trained",
+      "slug": "anc0_caesar",
+      "isolate": "Caesar shift via a pinned anchor",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "pin x[0]=3 (position_domain_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "fclamp0_id",
+      "checkpoint": "trained",
+      "slug": "fclamp0_clamp",
+      "isolate": "elementwise clamp via a pinned bound",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "pin x[0]=3 (position_domain_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "drot0_id",
+      "checkpoint": "trained",
+      "slug": "drot0_rotate",
+      "isolate": "cyclic rotation via a pinned amount",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "pin x[0]=3 (position_domain_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "refl0_id",
+      "checkpoint": "trained",
+      "slug": "refl0_mirror",
+      "isolate": "reflection via a pinned pivot",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "pin x[0]=3 (position_domain_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "stride0_id",
+      "checkpoint": "trained",
+      "slug": "stride0_gather",
+      "isolate": "strided gather via a pinned stride",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "pin x[0]=3 (position_domain_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "pref0_id",
+      "checkpoint": "trained",
+      "slug": "pref0_revk",
+      "isolate": "partial-prefix reverse via a pinned length",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "pin x[0]=5 (position_domain_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "psort0_id",
+      "checkpoint": "trained",
+      "slug": "psort0_sortk",
+      "isolate": "partial-prefix sort via a pinned length",
+      "isolate_by": {
+        "method": "custom",
+        "detail": "pin x[0]=5 (position_domain_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "cmpswap0p9_id",
+      "checkpoint": "trained",
+      "slug": "cmpswap09_swap",
+      "isolate": "unconditional positional swap",
+      "isolate_by": {
+        "method": "condition",
+        "detail": "x[0] > x[9] (compare_positions_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "bmax1_id",
+      "checkpoint": "trained",
+      "slug": "bmax1_delay",
+      "isolate": "delay-line shift on monotone input",
+      "isolate_by": {
+        "method": "condition",
+        "detail": "non-increasing input (monotone_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "pmstep_id",
+      "checkpoint": "trained",
+      "slug": "pmstep_evenadd",
+      "isolate": "uniform +1 map (even branch)",
+      "isolate_by": {
+        "method": "digits",
+        "detail": "digits in {0,2,4,6,8}"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "carryk1_id",
+      "checkpoint": "trained",
+      "slug": "carryk1_local",
+      "isolate": "local +1 increment (no carry)",
+      "isolate_by": {
+        "method": "condition",
+        "detail": "last digit < 9 (position_domain_sampler)"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "argminmax_id",
+      "checkpoint": "trained",
+      "slug": "argminmax_argmax",
+      "isolate": "global-argmax indicator (first output half)",
+      "isolate_by": {
+        "method": "output_positions",
+        "detail": "score output indices 0-9"
+      },
+      "faithfulness_target": 0.5
+    },
+    {
+      "model": "cjump10t5_id",
+      "checkpoint": "trained",
+      "slug": "cjump_forward",
+      "isolate": "unidirectional forward pointer-walk",
+      "isolate_by": {
+        "method": "digits",
+        "detail": "digits in {6,7,8,9}"
+      },
+      "faithfulness_target": 0.5
+    }
+  ]
+}

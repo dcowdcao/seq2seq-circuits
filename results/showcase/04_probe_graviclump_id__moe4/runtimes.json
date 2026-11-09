@@ -1,0 +1,48 @@
+{
+ "discovery": [
+  {
+   "step": "probes (site scan, training, validation)",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model graviclump_id__moe4 --only-circuit graviclump_full --stages data train probes",
+   "wall_seconds": 92
+  },
+  {
+   "step": "pair pool graviclump_edit",
+   "command": "python pipeline/run_model_pipeline.py --local --device cpu --model graviclump_id__moe4 --only-circuit graviclump_edit --stages data",
+   "wall_seconds": 14
+  },
+  {
+   "step": "probe EAP-IG on graviclump_full pairs",
+   "command": "python pipeline/find_circuits/eap.py --model graviclump_id__moe4 --topn-regime frac --circuit graviclump_full --probe graviclump_mean --probe-readout position --device cpu",
+   "wall_seconds": 71
+  },
+  {
+   "step": "probe EAP-IG on graviclump_full pairs, explicit rungs 17 20 23 26 30 34 38 43",
+   "command": "python pipeline/find_circuits/eap.py --model graviclump_id__moe4 --topns 17 20 23 26 30 34 38 43 --circuit graviclump_full --probe graviclump_mean --probe-readout position --device cpu",
+   "wall_seconds": 80
+  },
+  {
+   "step": "probe EAP-IG on graviclump_edit pairs",
+   "command": "python pipeline/find_circuits/eap.py --model graviclump_id__moe4 --topn-regime frac --circuit graviclump_edit --probe graviclump_mean --probe-readout position --device cpu",
+   "wall_seconds": 71
+  },
+  {
+   "step": "probe EAP-IG on graviclump_edit pairs, explicit rungs 17 20 23 26 30 34 38 43",
+   "command": "python pipeline/find_circuits/eap.py --model graviclump_id__moe4 --topns 17 20 23 26 30 34 38 43 --circuit graviclump_edit --probe graviclump_mean --probe-readout position --device cpu",
+   "wall_seconds": 79
+  }
+ ],
+ "selection": [
+  {
+   "step": "evaluate: graviclump_mean.select",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model graviclump_id__moe4 --circuit graviclump_mean --select --probe-layer 0 --probe-readout position --device cpu --seed 0 --threads 4 --out pipeline/circuits_data/_showcase/04_probe_graviclump_id__moe4.graviclump_mean.select.json",
+   "wall_seconds": 144
+  }
+ ],
+ "heldout": [
+  {
+   "step": "held-out re-evaluation (seed 1)",
+   "command": "python pipeline/find_circuits/evaluate_circuit.py --model graviclump_id__moe4 --circuit graviclump_mean --candidate results/showcase/04_probe_graviclump_id__moe4/circuit.json --probes-root results/showcase/04_probe_graviclump_id__moe4/probes --probe-layer 0 --probe-readout position --device cpu --seed 1 --threads 4 --out pipeline/circuits_data/_showcase/04_probe_graviclump_id__moe4.heldout.json",
+   "wall_seconds": 40
+  }
+ ]
+}
